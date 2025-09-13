@@ -86,22 +86,42 @@ $transition: 0.3s ease;
 		}
 	}
 
-	&__btn {
-		display: inline-block;
-		padding: 0.6rem 1.6rem;
-		background: $white;
-		color: $accent;
-		font-weight: 600;
-		text-decoration: none;
-		transition: $transition;
-		position: relative;
+	.hero {
+		&__btn {
+			display: inline-block;
+			padding: 0.6rem 1.6rem;
+			background: $white;
+			color: $accent;
+			font-weight: 600;
+			text-decoration: none;
+			transition: $transition;
+			position: relative;
+			z-index: 1;
 
-		// clip the bottom-right corner
-		clip-path: polygon(0 0, 100% 0, 100% 80%, 90% 100%, 0 100%);
+			// base button rectangle
+			&:hover {
+				background: $accent;
+				color: $white;
 
-		&:hover {
-			background: $accent;
-			color: $white;
+				&::after {
+					background: $accent;
+				}
+			}
+
+			// angled extension
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: -20px; // extension width
+				width: 20.5px;
+				height: 100%;
+				background: $white;
+        clip-path: polygon(0 0, 100% 0, 100% 30%, 0% 100%, 0 100%);
+				// clip-path: polygon(0 0, 100% 35%, 100% 100%, 0 100%);
+				z-index: -1; // stay behind text
+				transition: $transition;
+			}
 		}
 	}
 

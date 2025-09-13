@@ -68,7 +68,7 @@
     font-size: 2rem;
   }
 }
-.hero__btn {
+.hero .hero__btn {
   display: inline-block;
   padding: 0.6rem 1.6rem;
   background: #fff;
@@ -77,11 +77,26 @@
   text-decoration: none;
   transition: 0.3s ease;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 90% 100%, 0 100%);
+  z-index: 1;
 }
-.hero__btn:hover {
+.hero .hero__btn:hover {
   background: #a23ca3;
   color: #fff;
+}
+.hero .hero__btn:hover::after {
+  background: #a23ca3;
+}
+.hero .hero__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 20.5px;
+  height: 100%;
+  background: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 30%, 0% 100%, 0 100%);
+  z-index: -1;
+  transition: 0.3s ease;
 }
 .hero__location {
   margin-top: 1rem;
