@@ -510,8 +510,6 @@ p {
   color: $black;
   padding: 3rem 2rem;
 
-  
-
   .event-content {
     display: grid;
     grid-template-columns: 0.5fr 1fr;
@@ -721,31 +719,37 @@ p {
       flex-direction: row;
     }
 
-    .award-image {
-      position: relative;
-      z-index: 0;
-      flex: 1;
-      border: 10px solid $white;
-      background-color: transparent;
+    .award-border {
       overflow: hidden;
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 70% 100%, 0 100%);
-      img {
-        width: 100%;
-        scale: 0.8;
-        display: block;
-      }
+      .award-image {
+        position: relative;
+        flex: 1;
+        border: 1px solid $white;
+        background-color: transparent;
+        img {
+          width: 100%;
+          scale: 0.9;
+          display: block;
+          position: relative;
+          z-index: 2;
+        }
 
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: white;
-        clip-path: polygon(100% 75%, 100% 85%, 72% 100%, 65% 100%);
-        z-index: -1;
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          min-width: 20%;
+          bottom: -8rem;
+          right: -5rem;
+          width: 100%;
+          width: 60px;
+          transform: rotate(55deg);
+          height: 100%;
+          border: 1px solid $white;
+
+          background: $accent;
+          z-index: 1;
+        }
       }
     }
 
@@ -1015,64 +1019,76 @@ p {
     gap: 1rem;
   }
 
-  .alumni-card {
-    display: flex;
-    flex-direction: row;
-    background-color: transparent;
-    padding: 2rem;
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% calc(100% - 20px),
-      calc(100% - 20px) 100%,
-      0 100%,
-      0 0
-    );
+  .alumni-border {
+    overflow: hidden;
+    margin-bottom: 3rem;
+    .alumni-card {
+      display: flex;
+      flex-direction: row;
+      background-color: transparent;
+      padding: 2rem;
+      border: 1px solid #fff;
+      gap: 1.5rem;
+      margin: 0 auto;
+      position: relative;
 
-    border: 1px solid #fff;
-    gap: 1.5rem;
-    margin: 0 auto 3rem;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        min-width: 10%;
+        bottom: -8rem;
+        right: -5rem;
+        z-index: 1;
+        width: 60px;
+        transform: rotate(55deg);
+        height: 100%;
+        border: 1px solid #fff;
 
-    .alumni-image img {
-      clip-path: polygon(0 0, 81% 0, 100% 16%, 100% 100%, 0 100%);
-      object-fit: cover;
-    }
-
-    .alumni-info {
-      text-align: left;
-
-      .alumni-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 0.5rem;
+        background: $primary;
       }
 
-      h3 {
-        margin: 0 0 0.5rem;
-        font-weight: bold;
+      .alumni-image img {
+        clip-path: polygon(0 0, 81% 0, 100% 16%, 100% 100%, 0 100%);
+        object-fit: cover;
       }
 
-      .email {
-        background-color: #0072c6;
-        padding: 0.3rem 0.7rem;
-        display: flex;
-        align-items: center;
-        gap: 0.4rem;
-        border-radius: 4px;
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
+      .alumni-info {
+        text-align: left;
 
-        .icon {
-          display: grid;
-          place-items: center;
-          width: 16px;
-          height: 16px;
+        .alumni-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 0.5rem;
         }
-      }
-      .description {
-        font-size: 0.9rem;
-        line-height: 1.5;
+
+        h3 {
+          margin: 0 0 0.5rem;
+          font-weight: bold;
+        }
+
+        .email {
+          background-color: #0072c6;
+          padding: 0.3rem 0.7rem;
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          border-radius: 4px;
+          font-size: 0.9rem;
+          margin-bottom: 0.5rem;
+
+          .icon {
+            display: grid;
+            place-items: center;
+            width: 16px;
+            height: 16px;
+          }
+        }
+        .description {
+          font-size: 0.9rem;
+          line-height: 1.5;
+        }
       }
     }
   }
@@ -1165,6 +1181,12 @@ p {
 
       input {
         flex: 1;
+        width: 100%;
+        outline: none;
+        border: none;
+        font-size: 1rem;
+        background: #fff;
+        color: #000;
       }
     }
 
@@ -1172,23 +1194,62 @@ p {
     .angled-textarea {
       padding: 1rem;
       border: 1px solid #333;
-      outline: none;
-      font-size: 1rem;
-      background: #fff;
-      color: #000;
+
+      width: 100%;
+    }
+
+    .angled-border {
+      overflow: hidden;
+      width: 100%;
     }
 
     .angled-input {
       position: relative;
       z-index: 1;
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 100%, 0 100%);
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        min-width: 10%;
+        bottom: -2.4rem;
+        right: -2rem;
+        z-index: 1;
+        width: 60px;
+        transform: rotate(55deg);
+        height: 100%;
+        border: 1px solid #333;
+        background: #fff;
+      }
     }
 
     .angled-textarea {
+      width: 100%;
+      position: relative;
+      z-index: 1;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        min-width: 10%;
+        bottom: -7rem;
+        right: -2rem;
+        z-index: 1;
+        width: 60px;
+        transform: rotate(55deg);
+        height: 100%;
+        border: 1px solid #333;
+        background: #fff;
+      }
+    }
+
+    .textarea {
       min-height: 150px;
       width: 100%;
+      outline: none;
+      border: none;
       resize: none;
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 100%, 0 100%);
     }
 
     .angled-button {
@@ -1217,7 +1278,6 @@ p {
   padding: 2rem;
 
   .footer-container {
-    max-width: 900px;
     margin: 0 auto;
     font-size: 1rem;
     display: flex;
@@ -1259,10 +1319,5 @@ p {
   .footer-right {
     text-align: right;
     color: #ccc;
-    margin-top: 0.5rem;
-
-    @media (min-width: 600px) {
-      margin-top: 0;
-    }
   }
 }
