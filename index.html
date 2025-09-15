@@ -8,8 +8,7 @@
     <!-- Bootstrap Grid only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
 
     <!-- Our custom SCSS (compiled to CSS) -->
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -20,19 +19,17 @@
       <!-- White navigation strip -->
       <div class="hero__nav-strip">
         <div class="container">
-          <div class="row align-items-center">
+          <div class="row hero__header-bar">
             <!-- Left Logos -->
-            <div class="col-md-6 d-flex align-items-center gap-3">
+            <div class="col-md-6 hero__header-logo-bar">
               <img
                 src="assets/images/embs-logo.png"
                 alt="IEEE EMBS"
-                class="hero__logo"
-              />
+                class="hero__logo" />
               <img
                 src="assets/images/ku-logo.png"
                 alt="Khalifa University"
-                class="hero__logo"
-              />
+                class="hero__logo" />
             </div>
 
             <!-- Right Logo + Menu -->
@@ -40,8 +37,7 @@
               <img
                 src="assets/images/ieee-logo.png"
                 alt="IEEE"
-                class="hero__logo me-3"
-              />
+                class="hero__logo me-3" />
               <button class="hero__menu-toggle" aria-label="Menu">
                 <span></span><span></span><span></span>
               </button>
@@ -55,7 +51,7 @@
         <div class="container">
           <div class="row">
             <!-- Left aligned hero text -->
-            <div class="col-md-6">
+            <div class="col-md-7">
               <div class="hero__content">
                 <h1 class="hero__title">
                   IEEE Engineering in <br />
@@ -70,8 +66,7 @@
             <img
               src="assets/images/pin-drop-icon.png"
               alt="Location Icon"
-              class="hero__location-icon"
-            />
+              class="hero__location-icon" />
             Khalifa University, Main Campus, Building B, 2nd Floor
           </div>
         </div>
@@ -150,19 +145,18 @@
     <section class="events-section">
       <div class="container">
         <div class="row">
-          <div class="col-12 mb-5">
+          <div class="col-12">
             <h2 class="section-title">Upcoming Events</h2>
           </div>
         </div>
-        <div class="row g-4">
+        <div class="row event-cards">
           <!-- Event Card -->
           <div class="col-md-4">
             <div class="event-card">
               <img
                 src="assets/images/biocas-logo.png"
                 alt="BioCAS 2025"
-                class="event-card__logo"
-              />
+                class="event-card__logo" />
               <p class="event-card__desc">
                 21st IEEE Biomedical Circuits and Systems Conference
               </p>
@@ -174,8 +168,7 @@
               <img
                 src="assets/images/biocas-logo.png"
                 alt="BioCAS 2025"
-                class="event-card__logo"
-              />
+                class="event-card__logo" />
               <p class="event-card__desc">
                 21st IEEE Biomedical Circuits and Systems Conference
               </p>
@@ -187,8 +180,7 @@
               <img
                 src="assets/images/biocas-logo.png"
                 alt="BioCAS 2025"
-                class="event-card__logo"
-              />
+                class="event-card__logo" />
               <p class="event-card__desc">
                 21st IEEE Biomedical Circuits and Systems Conference
               </p>
@@ -201,7 +193,7 @@
     <!-- ================= MEDIA SECTION ================= -->
     <section class="media-section">
       <div class="container">
-        <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="d-flex justify-content-between align-items-center">
           <h2 class="section-title">Media</h2>
           <div class="media-section__nav">
             <button class="media-section__btn prev" aria-label="Previous">
@@ -212,14 +204,13 @@
             </button>
           </div>
         </div>
-        <div class="row g-4">
+        <div class="row media-cards">
           <div class="col-md-4 col-12">
             <div class="media-card">
               <img
                 src="assets/images/media-1.png"
                 alt="Media 1"
-                class="img-fluid"
-              />
+                class="img-fluid" />
             </div>
           </div>
           <div class="col-md-4 col-12">
@@ -227,14 +218,13 @@
               <img
                 src="assets/images/media-2.png"
                 alt="Media 2"
-                class="img-fluid"
-              />
+                class="img-fluid" />
             </div>
           </div>
           <div class="col-md-4 col-12">
             <div class="media-card">
               <img src="assets/images/media-1.png" alt="Media 3" 3"
-              class="img-fluid" />
+                class="img-fluid" />
             </div>
           </div>
         </div>
@@ -276,8 +266,7 @@
                 <img
                   src="assets/images/member-1.png"
                   alt="Rateb Katmah"
-                  class="bearer-card__photo"
-                />
+                  class="bearer-card__photo" />
               </div>
 
               <div class="bearer-card__role">President (PG)</div>
@@ -295,8 +284,7 @@
                 <img
                   src="assets/images/member-1.png"
                   alt="Rateb Katmah"
-                  class="bearer-card__photo"
-                />
+                  class="bearer-card__photo" />
               </div>
               <div class="bearer-card__role">President (PG)</div>
               <div class="bearer-card__info">
@@ -312,8 +300,7 @@
                 <img
                   src="assets/images/member-1.png"
                   alt="Rateb Katmah"
-                  class="bearer-card__photo"
-                />
+                  class="bearer-card__photo" />
               </div>
               <div class="bearer-card__role">President (PG)</div>
               <div class="bearer-card__info">
@@ -333,18 +320,17 @@
     <section class="event-section">
       <div class="container">
         <div class="event-content">
-          <h1 class="event-title">Events, Achievements & Highlights</h1>
+          <h1 class="event-title section-title">Events, Achievements &
+            Highlights</h1>
           <div class="event-list">
             <article class="event-item">
-              <span
-                >Lasers in Life Sciences: From 3D Bio Printing to Sensing</span
-              >
+              <span>Lasers in Life Sciences: From 3D Bio Printing to
+                Sensing</span>
               <a href="#" class="event-link">
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
               </a>
             </article>
             <article class="event-item">
@@ -353,8 +339,7 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
               </a>
             </article>
             <article class="event-item">
@@ -363,8 +348,7 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
               </a>
             </article>
             <article class="event-item">
@@ -373,8 +357,7 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
               </a>
             </article>
             <article class="event-item">
@@ -383,8 +366,7 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
               </a>
             </article>
             <article class="event-item">
@@ -393,8 +375,7 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
               </a>
             </article>
             <article class="event-item">
@@ -403,8 +384,7 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
               </a>
             </article>
             <article class="event-item">
@@ -413,20 +393,17 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
               </a>
             </article>
             <article class="event-item">
-              <span
-                >Mastering Ubuntu and Python: A Hands-On Coding Workshop</span
-              >
+              <span>Mastering Ubuntu and Python: A Hands-On Coding
+                Workshop</span>
               <a href="#" class="event-link">
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
               </a>
             </article>
             <article class="event-item">
@@ -435,8 +412,7 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
               </a>
             </article>
             <article class="event-item">
@@ -445,8 +421,7 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
               </a>
             </article>
             <article class="event-item">
@@ -455,8 +430,7 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
               </a>
             </article>
           </div>
@@ -472,8 +446,7 @@
             <img
               src="assets/images/grop-users-icon.png"
               alt="team"
-              class="stats-icon"
-            />
+              class="stats-icon" />
             <div class="stats-details">
               <h2 class="stats-number">260</h2>
               <p class="stats-label">Members</p>
@@ -484,8 +457,7 @@
             <img
               src="assets/images/event-icon.png"
               alt="team"
-              class="stats-icon"
-            />
+              class="stats-icon" />
             <div class="stats-details">
               <h2 class="stats-number">11</h2>
               <p class="stats-label">Events</p>
@@ -496,8 +468,7 @@
             <img
               src="assets/images/send-icon.png"
               alt="team"
-              class="stats-icon"
-            />
+              class="stats-icon" />
             <div class="stats-details">
               <h2 class="stats-number">986</h2>
               <p class="stats-label">Guests Invited</p>
@@ -516,8 +487,7 @@
             <img
               src="assets/images/group.png"
               alt="Conference Image"
-              class="conference-img"
-            />
+              class="conference-img" />
             <div class="conference-content">
               <h3>21st IEEE Biomedical Circuits and Systems Conference</h3>
               <p>
@@ -527,7 +497,9 @@
                 Applications” on Wednesday, February 19, 2025, at the Main
                 Campus Auditorium.
               </p>
-              <a href="#" class="read-more">Read More</a>
+              <a href="#"
+                class="button-shape button-shape-primary read-more">Read
+                More</a>
             </div>
           </div>
 
@@ -536,8 +508,7 @@
             <img
               src="assets/images/group.png"
               alt="Conference Image"
-              class="conference-img"
-            />
+              class="conference-img" />
             <div class="conference-content">
               <h3>21st IEEE Biomedical Circuits and Systems Conference</h3>
               <p>
@@ -547,7 +518,9 @@
                 Applications” on Wednesday, February 19, 2025, at the Main
                 Campus Auditorium.
               </p>
-              <a href="#" class="read-more">Read More</a>
+              <a href="#"
+                class="button-shape button-shape-primary read-more">Read
+                More</a>
             </div>
           </div>
 
@@ -556,8 +529,7 @@
             <img
               src="assets/images/group.png"
               alt="Conference Image"
-              class="conference-img"
-            />
+              class="conference-img" />
             <div class="conference-content">
               <h3>21st IEEE Biomedical Circuits and Systems Conference</h3>
               <p>
@@ -567,7 +539,9 @@
                 Applications” on Wednesday, February 19, 2025, at the Main
                 Campus Auditorium.
               </p>
-              <a href="#" class="read-more">Read More</a>
+              <a href="#"
+                class="button-shape button-shape-primary read-more">Read
+                More</a>
             </div>
           </div>
 
@@ -576,8 +550,7 @@
             <img
               src="assets/images/group.png"
               alt="Conference Image"
-              class="conference-img"
-            />
+              class="conference-img" />
             <div class="conference-content">
               <h3>21st IEEE Biomedical Circuits and Systems Conference</h3>
               <p>
@@ -587,7 +560,9 @@
                 Applications” on Wednesday, February 19, 2025, at the Main
                 Campus Auditorium.
               </p>
-              <a href="#" class="read-more">Read More</a>
+              <a href="#"
+                class="button-shape button-shape-primary read-more">Read
+                More</a>
             </div>
           </div>
         </div>
@@ -614,7 +589,9 @@
               Engineering in Medicine and Biology Society through impactful
               student engagement.
             </p>
-            <a href="#" class="read-more-btn">Read More</a>
+            <a href="#"
+              class="button-shape button-shape-light read-more-btn">Read
+              More</a>
           </div>
         </div>
 
@@ -628,7 +605,9 @@
               Engineering in Medicine and Biology Society through impactful
               student engagement.
             </p>
-            <a href="#" class="read-more-btn">Read More</a>
+            <a href="#"
+              class="button-shape button-shape-light read-more-btn">Read
+              More</a>
           </div>
           <div class="award-border">
             <div class="award-image">
@@ -645,7 +624,7 @@
         <div class="speakers-container">
           <!-- Left Column -->
           <div class="speakers-intro">
-            <h2>Distinguished Speakers</h2>
+            <h2 class="section-title">Distinguished Speakers</h2>
             <p>
               Over the past years, EMBS @KU has hosted several distinguished
               speakers, leading professionals in research and industry. Lecture
@@ -660,15 +639,13 @@
                 <img
                   src="assets/images/arrow-left.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
               </button>
               <button>
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
               </button>
             </div>
           </div>
@@ -680,8 +657,7 @@
               <div class="speaker-image">
                 <img
                   src="assets/images/speaker.png"
-                  alt="Prof. Jonathan Knowles"
-                />
+                  alt="Prof. Jonathan Knowles" />
               </div>
               <div class="speaker-info">
                 <h4>Prof. Jonathan Knowles</h4>
@@ -698,8 +674,7 @@
               <div class="speaker-image">
                 <img
                   src="assets/images/speaker.png"
-                  alt="Prof. Jonathan Knowles"
-                />
+                  alt="Prof. Jonathan Knowles" />
               </div>
               <div class="speaker-info">
                 <h4>Prof. Jonathan Knowles</h4>
@@ -719,7 +694,7 @@
     <section class="research-section">
       <div class="container">
         <div class="research-intro">
-          <h2>Research & Projects</h2>
+          <h2 class="section-title">Research & Projects</h2>
           <p class="subheading">Featured student and faculty research</p>
           <p class="description">
             Explore the cutting-edge research led by our faculty and students
@@ -762,8 +737,7 @@
               <img
                 src="assets/images/arrow-right.png"
                 alt="arrow"
-                class="arrow"
-              />
+                class="arrow" />
               Adaptation Robotics and Cognitive Load: Use of a Supernumerary
               Finger for Activities of Daily Living.
             </li>
@@ -771,8 +745,7 @@
               <img
                 src="assets/images/arrow-right.png"
                 alt="arrow"
-                class="arrow"
-              />
+                class="arrow" />
               Musculoskeletal model predictions sensitivity to upper body mass
               scaling during gait.
             </li>
@@ -780,8 +753,7 @@
               <img
                 src="assets/images/arrow-right.png"
                 alt="arrow"
-                class="arrow"
-              />
+                class="arrow" />
               Deep Learning Models to Predict Hip Joint Kinetics From Kinematics
               During Gait.
             </li>
@@ -789,8 +761,7 @@
               <img
                 src="assets/images/arrow-right.png"
                 alt="arrow"
-                class="arrow"
-              />
+                class="arrow" />
               A Methodology for Quantifying Neurological Adaptation to
               Physiotherapy in ACL-Injured Patients through Muscle Activity and
               Brain Connectivity Analysis.
@@ -799,8 +770,7 @@
               <img
                 src="assets/images/arrow-right.png"
                 alt="arrow"
-                class="arrow"
-              />
+                class="arrow" />
               A Ratiometric Conducting Polymer Redox Electrode Comprising of a
               Functionalized MOF for Dual Signal Bioelectronic Sensing.
             </li>
@@ -808,8 +778,7 @@
               <img
                 src="assets/images/arrow-right.png"
                 alt="arrow"
-                class="arrow"
-              />
+                class="arrow" />
               Data-driven analysis for the evaluation of cortical mechanics of
               non-adherent cells
             </li>
@@ -817,8 +786,7 @@
               <img
                 src="assets/images/arrow-right.png"
                 alt="arrow"
-                class="arrow"
-              />
+                class="arrow" />
               Bacterial Membrane Mimetics: From Biosensing to Disease Prevention
               and Treatment
             </li>
@@ -826,8 +794,7 @@
               <img
                 src="assets/images/arrow-right.png"
                 alt="arrow"
-                class="arrow"
-              />
+                class="arrow" />
               Revealing Bioremediation Potential of Novel Indigenous Bacteria
               from Oil-Contaminated Sites in the UAE: A Combined Bioinformatics
               and Experimental Approach
@@ -840,7 +807,7 @@
     <!-- alumni-section -->
     <section class="alumni-section">
       <div class="container">
-        <h2>Alumni & Networking</h2>
+        <h2 class="section-title">Alumni & Networking</h2>
         <p class="subtitle">Success stories of KU EMBS alumni</p>
         <div class="alumni-grid">
           <div class="alumni-border">
@@ -848,16 +815,15 @@
               <div class="alumni-image">
                 <img
                   src="assets/images/dr-halima-alnaqbi.png"
-                  alt="Dr. Halima Alnaqbi"
-                />
+                  alt="Dr. Halima Alnaqbi" />
               </div>
               <div class="alumni-info">
                 <div class="alumni-header">
                   <h3>Dr. Halima Alnaqbi</h3>
                   <p class="email">
-                    <span class="icon">
-                      <img src="assets/images/mail-icon.png" alt="email icon" />
-                    </span>
+                    <img src="assets/images/mail-icon.png" class="icon"
+                      alt="email icon" />
+
                     halima.alnaqbi@ku.ac.ae
                   </p>
                 </div>
@@ -894,16 +860,14 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
                 KU Alumni
               </li>
               <li>
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
                 KU Simplicity CSM
               </li>
             </ul>
@@ -915,58 +879,53 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
                 Peer Mentoring Program
               </li>
               <li>
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
-                Peer Tutoring Program
-              </li>
-              <li>
-                <img
-                  src="assets/images/arrow-right.png"
-                  alt="arrow"
-                  class="arrow"
-                />
-                KU Tawjeeh Program
-              </li>
-              <li>
-                <img
-                  src="assets/images/arrow-right.png"
-                  alt="arrow"
-                  class="arrow"
-                />
-                CTL – Student Development
-              </li>
-              <li>
-                <img
-                  src="assets/images/arrow-right.png"
-                  alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
                 Career & Alumni Services
               </li>
               <li>
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
+                Peer Tutoring Program
+              </li>
+              <li>
+                <img
+                  src="assets/images/arrow-right.png"
+                  alt="arrow"
+                  class="arrow" />
                 Career Fair
               </li>
               <li>
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow"
-                />
+                  class="arrow" />
+                KU Tawjeeh Program
+              </li>
+
+              <li>
+                <img
+                  src="assets/images/arrow-right.png"
+                  alt="arrow"
+                  class="arrow" />
                 Majors Day
               </li>
+              <li>
+                <img
+                  src="assets/images/arrow-right.png"
+                  alt="arrow"
+                  class="arrow" />
+                CTL – Student Development
+              </li>
+
             </ul>
           </div>
         </div>
@@ -976,7 +935,7 @@
     <!-- contact section  -->
     <section class="contact-section">
       <div class="container">
-        <h2>Contact Us</h2>
+        <h2 class="section-title">Contact Us</h2>
         <form class="contact-form">
           <div class="input-row">
             <div class="angled-border">
@@ -990,15 +949,18 @@
               </div>
             </div>
           </div>
-          <div class="angled-border">
-            <div class="angled-textarea">
-              <textarea
+          <div class="input-row">
+
+            <div class="angled-border">
+              <div class="angled-textarea">
+                <textarea
                 placeholder="Your Message"
-                class="textarea"
-              ></textarea>
+                class="textarea"></textarea>
+              </div>
             </div>
           </div>
-          <button type="submit" class="angled-button">Read More</button>
+          <a href="#" class="button-shape button-shape-dark">Read
+            More</a>
         </form>
       </div>
     </section>
@@ -1008,30 +970,32 @@
       <div class="container">
         <div class="footer-container">
 
-        <div class="footer-left">
-          <strong>Email Us</strong>
-          <span class="email">
-            <img src="assets/images/mail-icon.png" alt="email icon" />
-            embsclub@ku.ac.ae
-          </span>
-          <a href="https://linkedin.com" target="_blank" class="icon-link">
-            <img src="assets/images/linkedin.png" alt="linkedin" />
-          </a>
-          <a href="https://instagram.com" target="_blank" class="icon-link">
-            <img src="assets/images/instagram.png" alt="Instagram" />
-          </a>
-        </div>
+          <div class="footer-left">
+            <strong>Email Us</strong>
+            <span class="email">
+              <img src="assets/images/mail-icon.png" alt="email icon" />
+              embsclub@ku.ac.ae
+            </span>
+            <a href="https://linkedin.com" target="_blank" class="icon-link">
+              <img src="assets/images/linkedin.png" alt="linkedin" />
+            </a>
+            <a href="https://instagram.com" target="_blank" class="icon-link">
+              <img src="assets/images/instagram.png" alt="Instagram" />
+            </a>
+          </div>
 
-        <div class="footer-right">
-          Copyright 2025 - Khalifa University | All Rights Reserved
-        </div>
+          <div class="footer-right">
+            Copyright 2025 - Khalifa University | All Rights Reserved
+          </div>
         </div>
 
       </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

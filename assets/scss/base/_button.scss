@@ -1,0 +1,72 @@
+.button-shape {
+	display: inline-block;
+	padding: 0.6rem 1.6rem;
+	font-weight: 600;
+	text-decoration: none;
+	transition: var(--transition-speed);
+	position: relative;
+	z-index: 1;
+
+	// angled extension
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: -20px; // extension width
+		width: 20.5px;
+		height: 100%;
+		clip-path: polygon(0 0, 100% 0, 100% 30%, 0% 100%, 0 100%);
+		z-index: -1; // stay behind text
+		transition: var(--transition-speed);
+	}
+}
+
+.button-shape-primary {
+	background: var(--primary-color);
+	color: var(--white-color);
+	&::after {
+		background: var(--primary-color);
+	}
+
+	&:hover {
+		background: var(--secondary-color);
+		color: var(--white-color);
+
+		&::after {
+			background: var(--secondary-color);
+		}
+	}
+}
+
+.button-shape-light {
+	background: var(--white-color);
+	color: var(--primary-color);
+	&::after {
+		background: var(--white-color);
+	}
+
+	&:hover {
+		background: var(--secondary-color);
+		color: var(--white-color);
+
+		&::after {
+			background: var(--secondary-color);
+		}
+	}
+}
+.button-shape-dark {
+	background: var(--black-color);
+	color: var(--white-color);
+	&::after {
+		background: var(--black-color);
+	}
+
+	&:hover {
+		background: var(--primary-color);
+		color: var(--white-color);
+
+		&::after {
+			background: var(--primary-color);
+		}
+	}
+}
