@@ -6,7 +6,12 @@ $(document).ready(function () {
 });
 
 // ================= Carousel Swipe Helper =================
-function enableSwipe(carouselId, prevBtnId = null, nextBtnId = null) {
+function enableSwipe(
+	carouselId,
+	prevBtnId = null,
+	nextBtnId = null,
+	customIndicators = false
+) {
 	const el = document.querySelector(carouselId);
 	if (!el) return;
 
@@ -40,9 +45,37 @@ function enableSwipe(carouselId, prevBtnId = null, nextBtnId = null) {
 		if (startX - endX > 50) instance.next();
 		else if (endX - startX > 50) instance.prev();
 	});
+
+	// Extra: Custom indicators (for alumni)
+	if (customIndicators) {
+		el.addEventListener("slid.bs.carousel", function (e) {
+			const index = e.to;
+			document
+				.querySelectorAll(".alumni-section .boxes .box")
+				.forEach((box, i) => {
+					box.classList.toggle("active", i === index);
+
+					if (i === index) {
+						if (!box.querySelector(".sub-box")) {
+							const subBox = document.createElement("div");
+							subBox.classList.add("sub-box");
+							box.appendChild(subBox);
+						}
+					} else {
+						const sub = box.querySelector(".sub-box");
+						if (sub) sub.remove();
+					}
+				});
+		});
+	}
+
+	return instance;
 }
 
 // ================= INIT CAROUSELS =================
 enableSwipe("#eventsCarousel"); // Events
 enableSwipe("#mediaCarousel", "mediaPrev", "mediaNext"); // Media
-enableSwipe("#speakersCarousel", "speakersPrev", "speakersNext");
+enableSwipe("#speakersCarousel", "speakersPrev", "speakersNext"); // Speakers
+enableSwipe("#alumniCarousel", null, 'alumniNext', true);
+
+
