@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+@import "responsive";
+
 :root {
   --primary-color: #75277d;
   --secondary-color: #00578c;
   --white-color: #fff;
   --black-color: #000;
-  --gray-color: #f5f5f5;
+  --gray-color: #f5f5f5;  
+  --dark-gray-color: #2c3e50;  
   --transition-speed: 0.3s ease;
 
   --shape-right: polygon(100% 0, 60% 0, 55% 100%, 100% 100%);
@@ -20,22 +23,36 @@
   --font-xxxl: 4rem;
 }
 
-// ================= VARIABLES =================
-$transition: 0.3s ease;
 
 // ================= VARIABLES =================
-$white: #fff;
-$black: #000;
-$primary: #005b9f;
-$accent: #a23ca3;
-$gray: #f5f5f5;
-$transition: 0.3s ease;
-$dark-gray: #2c3e50;
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// mixins
+@mixin responsive($breakpoint, $type: max) {
+  $size: map-get($breakpoints, $breakpoint);
+
+  @if $size != null {
+    @if $type == max {
+      @media (min-width: #{$size}) {
+        @content;
+      }
+    }
+  }
+}
 
 body {
   overflow-x: hidden;
   font-family: "Open Sans", sans-serif;
-  margin: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
   padding: 0;
 }
 
@@ -136,7 +153,7 @@ p {
       width: 28px;
       height: 3px;
       background: var(--white-color);
-      transition: $transition;
+      transition: var(--transition-speed);
     }
   }
 
@@ -176,7 +193,7 @@ p {
     color: var(--secondary-color);
     font-weight: 600;
     text-decoration: none;
-    transition: $transition;
+    transition: var(--transition-speed);
     position: relative;
     z-index: 1;
 
@@ -201,7 +218,7 @@ p {
       background: var(--white-color);
       clip-path: polygon(0 0, 100% 0, 100% 30%, 0% 100%, 0 100%);
       z-index: -1; // stay behind text
-      transition: $transition;
+      transition: var(--transition-speed);
     }
   }
 }
@@ -402,7 +419,7 @@ p {
     color: var(--secondary-color);
     font-weight: 600;
     text-decoration: none;
-    transition: $transition;
+    transition: var(--transition-speed);
     position: relative;
     z-index: 1;
 
@@ -425,7 +442,7 @@ p {
       background: var(--white-color);
       clip-path: polygon(0 0, 100% 0, 100% 30%, 0% 100%);
       z-index: -1;
-      transition: $transition;
+      transition: var(--transition-speed);
     }
   }
 }
@@ -475,7 +492,7 @@ p {
       clip-path: polygon(100% 0, 100% 35%, 80% 100%, 0 100%, 0 0);
 
       display: inline-block;
-      transition: $transition;
+      transition: var(--transition-speed);
     }
 
     &__info {
@@ -506,8 +523,8 @@ p {
 
 // event and Achievements
 .event-section {
-  background: $white;
-  color: $black;
+  background: var(--white-color);
+  color: var(--black-color);
   padding: 3rem 2rem;
 
   .event-content {
@@ -518,7 +535,7 @@ p {
     .event-title {
       font-size: 3rem;
       font-weight: 600;
-      color: $black;
+      color: var(--black-color);
     }
 
     .event-list {
@@ -565,8 +582,8 @@ p {
 
 // stats section
 .stats-section {
-  background: $white;
-  color: $black;
+  background: var(--white-color);
+  color: var(--black-color);
   padding: 3rem 2rem;
 
   .stats-container {
@@ -588,7 +605,7 @@ p {
     display: flex;
     align-items: center;
     padding: 2rem;
-    color: $white;
+    color: var(--white-color);
     min-width: 250px;
 
     .stats-icon {
@@ -609,23 +626,23 @@ p {
     }
 
     &.stats-members {
-      background-color: $accent;
+      background-color: var(--primary-color);
     }
 
     &.stats-events {
-      background-color: $primary;
+      background-color: var(--secondary-color);
     }
 
     &.stats-guests {
-      background-color: $dark-gray;
+      background-color: var(--dark-gray-color);
     }
   }
 }
 
 // conference-section
 .conference-section {
-  background: $white;
-  color: $black;
+  background: var(--white-color);
+  color: var(--black-color);
   padding: 3rem 2rem;
 
   .conference-container {
@@ -663,25 +680,25 @@ p {
         font-size: 0.95rem;
         margin-bottom: 1rem;
         line-height: 1.5;
-        color: $black;
+        color: var(--black-color);
       }
 
       .read-more {
         display: inline-block;
         padding: 0.6rem 1.6rem;
-        color: $white;
-        background: $accent;
+        color: var(--white-color);
+        background: var(--primary-color);
         font-weight: 600;
         text-decoration: none;
-        transition: $transition;
+        transition: var(--transition-speed);
         position: relative;
 
         // clip the bottom-right corner
         clip-path: polygon(0 0, 100% 0, 100% 80%, 90% 100%, 0 100%);
 
         &:hover {
-          background: rgba($accent, 0.8);
-          color: $white;
+          background: rgba(var(--primary-color), 0.8);
+          color: var(--white-color);
         }
       }
     }
@@ -690,8 +707,8 @@ p {
 
 // award and milestone section
 .awards-section {
-  background: $accent;
-  color: $white;
+  background: var(--primary-color);
+  color: var(--white-color);
   padding: 3rem 2rem;
 
   .awards-container {
@@ -724,7 +741,7 @@ p {
       .award-image {
         position: relative;
         flex: 1;
-        border: 1px solid $white;
+        border: 5px solid var(--white-color);
         background-color: transparent;
         img {
           width: 100%;
@@ -745,9 +762,9 @@ p {
           width: 60px;
           transform: rotate(55deg);
           height: 100%;
-          border: 1px solid $white;
+          border: 5px solid var(--white-color);
 
-          background: $accent;
+          background: var(--primary-color);
           z-index: 1;
         }
       }
@@ -769,19 +786,19 @@ p {
       .read-more-btn {
         display: inline-block;
         padding: 0.6rem 1.6rem;
-        background: $white;
-        color: $accent;
+        background: var(--white-color);
+        color: var(--primary-color);
         font-weight: 600;
         text-decoration: none;
-        transition: $transition;
+        transition: var(--transition-speed);
         position: relative;
 
         // clip the bottom-right corner
         clip-path: polygon(0 0, 100% 0, 100% 80%, 90% 100%, 0 100%);
 
         &:hover {
-          background: $accent;
-          color: $white;
+          background: var(--primary-color);
+          color: var(--white-color);
         }
       }
     }
@@ -791,7 +808,7 @@ p {
 // speakers-section
 .speakers-section {
   background-color: #fff;
-  color: $black;
+  color: var(--black-color);
   padding: 3rem 2rem;
 
   .speakers-container {
@@ -820,15 +837,15 @@ p {
       gap: 1rem;
 
       button {
-        background-color: $accent;
-        color: $white;
+        background-color: var(--primary-color);
+        color: var(--white-color);
         border: none;
         padding: 0.6rem 1rem;
         font-size: 1.2rem;
         cursor: pointer;
 
         &:hover {
-          background-color: darken($accent, 10%);
+          background-color: var(--primary-color);
         }
       }
     }
@@ -846,7 +863,7 @@ p {
 
     .speaker-image {
       position: relative;
-      background-color: $accent;
+      background-color: var(--primary-color);
       clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 40%);
       overflow: hidden;
 
@@ -861,20 +878,20 @@ p {
       margin-top: 1rem;
 
       h4 {
-        color: $accent;
+        color: var(--primary-color);
         font-size: 1.2rem;
         margin-bottom: 0.2rem;
       }
 
       .affiliation {
         display: block;
-        color: rgba($accent, 0.8);
+        color: rgba(var(--primary-color), 0.8);
 
         font-size: 1.2rem;
       }
 
       p {
-        border-top: 1px solid $accent;
+        border-top: 1px solid var(--primary-color);
         margin-top: 0.5rem;
         padding-top: 0.5rem;
         font-size: 1.05rem;
@@ -888,7 +905,7 @@ p {
 .research-section {
   background: transparent;
 
-  color: $black;
+  color: var(--black-color);
   padding: 3rem 2rem;
 
   .research-container {
@@ -905,7 +922,7 @@ p {
       font-size: 3rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
-      color: $black;
+      color: var(--black-color);
     }
 
     .subheading {
@@ -964,7 +981,7 @@ p {
 
   .publications {
     h3 {
-      color: $accent;
+      color: var(--primary-color);
       font-size: 1.2rem;
       font-weight: 700;
       margin-bottom: 1rem;
@@ -990,8 +1007,8 @@ p {
 
 // .alumni-section
 .alumni-section {
-  background-color: $primary; // KU Blue
-  color: $white;
+  background-color: var(--secondary-color); // KU Blue
+  color: var(--white-color);
 
   padding: 3rem 2rem;
   text-align: center;
@@ -1045,7 +1062,7 @@ p {
         height: 100%;
         border: 1px solid #fff;
 
-        background: $primary;
+        background: var(--secondary-color);
       }
 
       .alumni-image img {
@@ -1167,7 +1184,7 @@ p {
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
-    color: $black;
+    color: var(--black-color);
   }
 
   .contact-form {
@@ -1273,7 +1290,7 @@ p {
 
 // footer section
 .site-footer {
-  background-color: $black;
+  background-color: var(--black-color);
   color: #ccc;
   padding: 2rem;
 
@@ -1281,8 +1298,13 @@ p {
     margin: 0 auto;
     font-size: 1rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    @include responsive(lg) {
+      justify-content: space-between;
+      align-items: center;
+    }
+
     flex-wrap: wrap;
     font-size: 0.9rem;
     line-height: 1.7;
