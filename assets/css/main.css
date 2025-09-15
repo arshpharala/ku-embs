@@ -1610,13 +1610,17 @@ p {
   }
   .alumni-section .alumni-border .alumni-card {
     padding: 1rem;
+    gap: calc(1rem + 0.5vw);
   }
   .alumni-section .alumni-border .alumni-card::before, .alumni-section .alumni-border .alumni-card::after {
+    display: none;
     bottom: -14rem;
     right: -15.5rem;
   }
   .alumni-section .alumni-border .alumni-card .alumni-info .alumni-header {
     flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
   }
   .alumni-section .alumni-border .alumni-card .alumni-info .description {
     font-size: 0.85rem;
