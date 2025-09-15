@@ -1171,13 +1171,18 @@ p {
   flex-direction: row;
   justify-content: space-between;
   gap: 1rem;
-  font-size: 0.9rem;
+  font-size: var(--font-lg);
   line-height: 1.7;
 }
 .site-footer .footer-left {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+}
+.site-footer .footer-left .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 .site-footer .footer-left strong {
   color: #fff;
@@ -1186,6 +1191,9 @@ p {
 .site-footer .footer-left .email {
   color: #ccc;
   margin-right: 1rem;
+}
+.site-footer .footer-left .email img {
+  margin-top: -5px;
 }
 .site-footer .footer-left .icon-link img {
   width: 20px;
