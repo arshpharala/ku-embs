@@ -752,6 +752,7 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  align-items: stretch;
 }
 .speakers-section .speaker-card {
   display: flex;
@@ -764,7 +765,7 @@ p {
   overflow: hidden;
 }
 .speakers-section .speaker-card .speaker-image img {
-  width: 100%;
+  width: 100% !important;
   display: block;
   object-fit: cover;
 }
@@ -808,7 +809,6 @@ p {
 }
 .research-section .labs {
   display: flex;
-  margin-bottom: 2.5rem;
 }
 .research-section .labs .lab-list {
   flex: 1.1;
@@ -820,6 +820,7 @@ p {
   cursor: pointer;
   color: var(--black-color);
   font-weight: 300;
+  border-bottom: 1px solid var(--black-color);
 }
 .research-section .labs .lab-list p:first-child {
   margin-top: 0;
@@ -848,7 +849,7 @@ p {
   text-decoration: none;
 }
 .research-section .publications {
-  padding: var(--margin-section) 0;
+  padding: 4rem 0 var(--margin-section);
 }
 .research-section .publications h3 {
   color: var(--primary-color);
@@ -1304,9 +1305,17 @@ p {
 }
 /* ---------- For Small Phones (<= 480px) ---------- */
 @media (max-width: 480px) {
+  .hero {
+    height: 60vh;
+    min-height: 330px;
+  }
   .hero__botom-tagline {
     font-size: 0.8rem;
-    max-width: 210px;
+    width: 100%;
+    height: 0;
+  }
+  .hero__bottom-strip {
+    display: none;
   }
   .hero__nav-strip {
     height: 70px;

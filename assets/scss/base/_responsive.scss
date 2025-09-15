@@ -236,17 +236,25 @@
 @media (max-width: 480px) {
 	// hero section
 	.hero {
+		// &__header-bar{
+		//   display: flex;
+		//   flex-direction: column;
+		//   justify-content: space-between;
+		//   align-items: center;
+		// }
 
-    // &__header-bar{
-    //   display: flex;
-    //   flex-direction: column;
-    //   justify-content: space-between;
-    //   align-items: center;
-    // }
-    
+		height: 60vh;
+		min-height: 330px;
+
 		&__botom-tagline {
 			font-size: 0.8rem;
-			max-width: 210px;
+			width: 100%;
+
+			height: 0;
+		}
+
+		&__bottom-strip {
+			display: none;
 		}
 
 		&__nav-strip {
@@ -261,9 +269,10 @@
 			height: auto;
 		}
 
-    &__ieee-logo,&__menu-toggle {
-      filter: brightness(0) saturate(100%);
-    }
+		&__ieee-logo,
+		&__menu-toggle {
+			filter: brightness(0) saturate(100%);
+		}
 
 		&__title {
 			font-size: var(--font-semi-xl);

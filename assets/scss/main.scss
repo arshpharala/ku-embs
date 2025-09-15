@@ -588,7 +588,7 @@ p {
 	}
 }
 
-// event and Achievements
+// ================= EVENT AND ACHIEVEMENTS SECTION =================
 .event-section {
 	background: var(--white-color);
 	color: var(--black-color);
@@ -647,7 +647,7 @@ p {
 	}
 }
 
-// stats section
+// ================= STATS SECTION =================
 .stats-section {
 	margin-top: var(--margin-section);
 
@@ -695,7 +695,7 @@ p {
 	}
 }
 
-// conference-section
+// ================= CONFERENCE SECTION =================
 .conference-section {
 	margin-top: var(--margin-section);
 
@@ -741,7 +741,7 @@ p {
 	}
 }
 
-// award and milestone section
+// ================= AWARD AND MILESTONE SECTION =================
 .awards-section {
 	background: var(--primary-color);
 	color: var(--white-color);
@@ -815,7 +815,7 @@ p {
 	}
 }
 
-// speakers-section
+// ================= SPEAKER SECTION =================
 .speakers-section {
 	padding-top: var(--margin-section);
 
@@ -857,6 +857,7 @@ p {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 2rem;
+		align-items: stretch;
 	}
 
 	.speaker-card {
@@ -870,7 +871,7 @@ p {
 			overflow: hidden;
 
 			img {
-				width: 100%;
+				width: 100% !important;
 				display: block;
 				object-fit: cover;
 			}
@@ -903,7 +904,7 @@ p {
 	}
 }
 
-// <!-- research-section -->
+// ================= RESEARCH SECTION =================
 .research-section {
 	color: var(--black-color);
 	padding-top: var(--margin-section);
@@ -925,7 +926,6 @@ p {
 
 	.labs {
 		display: flex;
-		margin-bottom: 2.5rem;
 
 		.lab-list {
 			flex: 1.1;
@@ -937,6 +937,8 @@ p {
 				cursor: pointer;
 				color: var(--black-color);
 				font-weight: 300;
+
+				border-bottom: 1px solid var(--black-color);
 
 				&:first-child {
 					margin-top: 0;
@@ -972,7 +974,7 @@ p {
 	}
 
 	.publications {
-		padding: var(--margin-section) 0;
+		padding: 4rem 0 var(--margin-section);
 		h3 {
 			color: var(--primary-color);
 			font-size: var(--font-lg);
@@ -1001,7 +1003,7 @@ p {
 	}
 }
 
-// .alumni-section
+// ================= ALUMNI SECTION =================
 .alumni-section {
 	background-color: var(--secondary-color); // KU Blue
 	color: var(--white-color);
