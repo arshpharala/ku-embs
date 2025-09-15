@@ -1308,6 +1308,19 @@ p {
     font-size: 0.8rem;
     max-width: 210px;
   }
+  .hero__nav-strip {
+    height: 70px;
+  }
+  .hero__nav-strip::before {
+    clip-path: none;
+  }
+  .hero__logo {
+    width: 70px;
+    height: auto;
+  }
+  .hero__ieee-logo, .hero__menu-toggle {
+    filter: brightness(0) saturate(100%);
+  }
   .hero__title {
     font-size: var(--font-semi-xl);
   }
