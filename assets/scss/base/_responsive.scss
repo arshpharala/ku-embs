@@ -1,646 +1,1047 @@
+/* ---------- For desktop and large Laptops (<= 1200px) ---------- */
+@media (max-width: 1200px) {
+  .hero {
+    &__title {
+      font-size: var(--font-xl);
+    }
+  }
+
+  // .embs-section
+  .embs-section {
+    p {
+      font-size: 1rem;
+      margin: 0;
+    }
+  }
+
+  //   .mission-vision-section
+  .mission-vision-section {
+    .card {
+      .card-body {
+        .card-title {
+          font-size: var(--font-semi-xl);
+          font-weight: 500;
+        }
+
+        .card-text {
+          font-size: var(--font-md);
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  // ================= EVENTS SECTION =================
+  .events-section {
+    .section-title {
+      font-size: var(--font-xl);
+    }
+  }
+
+  // media-section
+  .media-section {
+    .section-title {
+      font-size: var(--font-xl);
+    }
+  }
+
+  // .membership-section
+  .membership-section {
+    &__title {
+      font-size: var(--font-xl);
+    }
+
+    &__subtitle {
+      font-size: var(--font-md);
+    }
+
+    &__btn {
+      text-align: center;
+      padding: 0.8rem;
+    }
+  }
+
+  // office-bearers-section
+  .office-bearers-section {
+    .section-title {
+      font-size: var(--font-xl);
+    }
+
+    .bearer-card {
+      &__name {
+        font-size: var(--font-lg);
+      }
+
+      &__contact {
+        font-size: var(--font-md);
+      }
+    }
+  }
+
+  // event section
+  .event-section {
+    .event-content {
+      .event-title {
+        font-size: var(--font-xl);
+      }
+      .event-list {
+        .event-item {
+          gap: 1rem;
+          span {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+
+  // stats-section
+  .stats-section {
+    .stats-box {
+      .stats-details {
+        .stats-number {
+          font-size: var(--font-xl);
+        }
+
+        .stats-label {
+          font-size: var(--font-lg);
+        }
+      }
+
+      .stats-icon {
+        width: 36px;
+        height: 36px;
+        margin-right: 0.8rem;
+      }
+    }
+  }
+
+  // conference-section
+  .conference-section {
+    .conference-card {
+      .conference-content {
+        h3 {
+          font-size: var(--font-lg);
+        }
+
+        p {
+          font-size: var(--font-md);
+
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  // Awards Section
+  .awards-section {
+    .awards-title {
+      font-size: var(--font-xl);
+    }
+
+    .award-item {
+      .award-text {
+        h3 {
+          font-size: var(--font-lg);
+        }
+
+        p {
+          font-size: var(--font-md);
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  // Speakers Section
+  .speakers-section {
+    .speakers-intro {
+      h2 {
+        font-size: var(--font-xl);
+      }
+
+      p {
+        font-size: var(--font-md);
+
+        line-height: 1.5;
+      }
+    }
+
+    .speaker-card {
+      .speaker-info {
+        h4 {
+          font-size: var(--font-md);
+        }
+
+        .affiliation {
+          font-size: var(--font-md);
+        }
+
+        p {
+          font-size: var(--font-sm);
+        }
+      }
+    }
+  }
+
+  // Research Section
+  .research-section {
+    .research-intro {
+      h2 {
+        font-size: var(--font-xl);
+      }
+
+      .subheading {
+        font-size: var(--font-lg);
+      }
+
+      .description {
+        font-size: var(--font-md);
+      }
+    }
+
+    .labs {
+      .lab-details {
+        font-size: 0.9rem;
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+
+      .lab-list p {
+        font-size: 0.9rem;
+      }
+    }
+
+    .publications {
+      h3 {
+        font-size: 1rem;
+      }
+
+      ul li {
+        font-size: 0.9rem;
+        gap: 0.4rem;
+
+        img {
+          width: 14px;
+          height: 14px;
+          margin-top: 0.4rem;
+        }
+      }
+    }
+  }
+
+  // Alumni Section
+  .alumni-section {
+    h2 {
+      font-size: var(--font-xl);
+    }
+
+    .subtitle {
+      font-size: var(--font-lg);
+    }
+
+    .alumni-border {
+      .alumni-card {
+        .alumni-info {
+          .description {
+            font-size: var(--font-md);
+          }
+        }
+      }
+    }
+
+    .grid-links ul li {
+      font-size: var(--font-sm);
+    }
+  }
+
+  // Contact Section
+  .contact-section {
+    h2 {
+      font-size: var(--font-xl);
+      margin-bottom: 1rem;
+    }
+  }
+
+  // footer Section
+  .site-footer {
+    .footer-left {
+      font-size: var(--font-sm);
+    }
+    .footer-right {
+      font-size: var(--font-sm);
+    }
+  }
+}
+
 /* ---------- For Tablets and Small Laptops (<= 992px) ---------- */
 @media (max-width: 992px) {
-	// hero section
-	.hero {
-		&__botom-tagline {
-			font-size: 1rem;
-			max-width: 360px;
-		}
-	}
-	// membership-section
-	.membership-section {
-		background: var(--primary-color);
+  // hero section
+  .hero {
+    &__logo {
+      width: 9rem;
+      height: auto;
+    }
 
-		&__content {
-			justify-content: center;
-			text-align: center;
-		}
-	}
+    &__botom-tagline {
+      font-size: 1rem;
+      max-width: 360px;
+    }
 
-	// office-bearers-section
-	.office-bearers-section {
-		.bearer-grid {
-			display: grid;
-			width: 100%;
-			gap: 1.5rem;
-			grid-template-columns: repeat(2, 1fr);
-		}
+    &__botom-tagline {
+      font-size: 0.9rem;
+      width: 100%;
+    }
 
-		.col-sm-6 {
-			width: 100%;
-			margin: auto;
-		}
-	}
-	// event section
-	.event-section {
-		.event-content {
-			grid-template-columns: 1fr;
-		}
+    &__title {
+      font-size: var(--font-xl);
+    }
+  }
 
-		.event-item {
-			padding: 1rem 1.2rem;
+  // membership-section
+  .membership-section {
+    background: var(--primary-color);
 
-			span {
-				font-size: 0.95rem;
-			}
-		}
-	}
+    &__content {
+      justify-content: center;
+      text-align: center;
+    }
+  }
 
-	// conference-section
-	.conference-section {
-		padding: 2rem 1rem;
+  // office-bearers-section
+  .office-bearers-section {
+    .bearer-cards {
+      .bearer-card {
+        .bearer-card__role {
+          font-size: var(--font-sm);
+        }
 
-		.conference-content {
-			h3 {
-				font-size: 1.1rem;
-			}
+        &__name {
+          font-size: var(--font-md);
+        }
 
-			p {
-				font-size: 0.95rem;
-			}
+        &__contact {
+          font-size: var(--font-sm);
+        }
+      }
+    }
+  }
+  // event section
+  .event-section {
+    .event-content {
+      grid-template-columns: 1fr;
+    }
 
-			.read-more {
-				padding: 0.5rem 1.4rem;
-				font-size: 0.95rem;
-			}
-		}
-	}
+    .event-item {
+      padding: 1rem 1.2rem;
 
-	// .awards-section
-	.awards-section {
-		.award-item {
-			flex-direction: column !important;
-			&.reverse {
-				flex-direction: column-reverse !important;
-			}
-			.award-text {
-				h3 {
-					font-size: 1.3rem;
-				}
+      span {
+        font-size: 0.95rem;
+      }
+    }
+  }
 
-				p {
-					font-size: 1rem;
-				}
+  // stats section
+  .stats-section {
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-				.read-more-btn {
-					padding: 0.5rem 1.4rem;
-				}
-			}
+    .stats-box {
+      min-width: auto;
+      &.stats-guests {
+        grid-column: span 2;
+      }
+    }
+  }
 
-			.award-border {
-				.award-image {
-					img {
-						scale: 1;
-					}
-				}
-			}
-		}
-	}
+  // conference-section
+  .conference-section {
+    .conference-card {
+      .conference-content {
+        h3 {
+          font-size: var(--font-md);
+        }
 
-	// Speakers Section
-	.speakers-section {
-		padding: 2rem 1rem;
+        p {
+          font-size: var(--font-sm);
+        }
 
-		.speakers-container {
-			grid-template-columns: 1fr;
-		}
-	}
+        .read-more {
+          padding: 0.5rem 1.4rem;
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
 
-	// Research Section
-	.research-section {
-		.labs {
-			flex-direction: column;
+  // .awards-section
+  .awards-section {
+    .award-item {
+      flex-direction: column !important;
+      &.reverse {
+        flex-direction: column-reverse !important;
+      }
+      .award-text {
+        h3 {
+          font-size: var(--font-md);
+        }
 
-			.lab-list {
-				border-right: none;
-				border-bottom: 1px solid #ccc;
-				padding-right: 0;
-				padding-bottom: 1rem;
-			}
+        p {
+          font-size: var(--font-sm);
+        }
 
-			.lab-details {
-				padding: 2rem 1rem;
-			}
-		}
-	}
+        .read-more-btn {
+          padding: 0.5rem 1.4rem;
+        }
+      }
 
-	// Alumni Section
-	.alumni-section {
-		.alumni-grid {
-			flex-direction: column;
-		}
+      .award-border {
+        .award-image {
+          img {
+            scale: 1;
+          }
+        }
+      }
+    }
+  }
 
-		.alumni-border {
-			margin-bottom: 2rem;
+  // Speakers Section
+  .speakers-section {
+    .speakers-container {
+      grid-template-columns: 1fr;
+    }
+  }
 
-			.alumni-card {
-				flex-direction: column;
-				padding: 1.5rem;
+  // Research Section
+  .research-section {
+    .labs {
+      flex-direction: column;
 
-				&::before,
-				&::after {
-					bottom: -10.5rem;
-					right: -10rem;
-				}
+      .lab-list {
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        padding-right: 0;
+        padding-bottom: 1rem;
+      }
 
-				.alumni-image img {
-					width: 100%;
-					height: auto;
-					clip-path: none;
-					margin-bottom: 1rem;
-					border-radius: 8px;
-				}
-			}
-		}
+      .lab-details {
+        padding: 2rem 1rem;
+      }
+    }
+  }
 
-		.boxes {
-			flex-direction: row;
-			margin-bottom: 2rem;
+  // Alumni Section
+  .alumni-section {
+    .alumni-grid {
+      flex-direction: column;
+    }
 
-			img {
-				rotate: -90deg;
-			}
-		}
+    .alumni-border {
+      margin-bottom: 2rem;
 
-		.grid-links {
-			grid-template-columns: 1fr;
-			gap: 1.5rem;
+      .alumni-card {
+        flex-direction: column;
+        padding: 1.5rem;
 
-			.mentorship-programs {
-				border-left: none;
-				padding-left: 0;
-				grid-column: auto;
-			}
-		}
-	}
+        &::before,
+        &::after {
+          bottom: -10.5rem;
+          right: -10rem;
+          display: none;
+        }
 
-	// Footer
-	.site-footer {
-		.footer-container {
-			flex-direction: column;
-			justify-content: center;
-		}
-	}
+        .alumni-image img {
+          width: 50%;
+          height: 50%;
+          object-fit: contain;
+        }
+      }
+    }
+    .alumni-card {
+      .alumni-info {
+        h3 {
+          font-size: var(--font-md);
+        }
+
+        .email {
+          font-size: var(--font-sm);
+        }
+        .description {
+          font-size: var(--font-sm);
+        }
+      }
+    }
+
+    .boxes {
+      flex-direction: row;
+      margin-bottom: 2rem;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        rotate: -90deg;
+      }
+    }
+
+    .grid-links {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+
+      .mentorship-programs {
+        border-left: none;
+        padding-left: 0;
+        grid-column: auto;
+      }
+    }
+  }
+
+  // Contact Section
+  .contact-section {
+    .section-title {
+      font-size: var(--font-xl);
+    }
+  }
+
+  // Footer
+  .site-footer {
+    .footer-container {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
 }
 
 /* ---------- For Tablets and Large Phones (<= 767px) ---------- */
-@media (max-width: 767px) {
-	// stats section
-	.stats-section {
-		.stats-grid {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-		}
+@media (max-width: 768px) {
+  // hero section
+  .hero {
+    &__logo {
+      width: 110px;
+      height: auto;
+    }
+  }
 
-		.stats-box {
-			min-width: auto;
-			&.stats-guests {
-				grid-column: span 2;
-			}
-		}
-	}
+  // .embs-section
+  .embs-section {
+    margin-top: 2rem;
 
-	// alumni section
-	.alumni-section {
-		.grid-links {
-			.mentorship-list {
-				grid-template-columns: 1fr;
-			}
-		}
-	}
+    padding: 1.5rem 1rem;
+  }
+  //   .mission-vision-section
+  .mission-vision-section {
+    margin-top: 0;
 
-	// contact section
-	.contact-section {
-		padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
+  }
+  // ================= EVENTS SECTION =================
+  .events-section {
+    margin-top: 0;
+    padding: 1.5rem 1rem;
+  }
+  // media-section
+  .media-section {
+    margin-top: 0;
 
-		h2 {
-			font-size: 2rem;
-		}
+    padding: 1.5rem 1rem;
+  }
 
-		.contact-form {
-			.input-row {
-				flex-direction: column;
-			}
+  // .membership-section
+  .membership-section {
+    margin-top: 2rem;
 
-			.angled-button {
-				width: 100%;
-				text-align: center;
-				align-self: stretch;
-				clip-path: none;
-			}
-		}
-	}
+    padding: 1.5rem 1rem;
+  }
+
+  // office-bearers-section
+  .office-bearers-section {
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+
+    .bearer-cards {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 1.5rem;
+    }
+  }
+
+  // event section
+  .event-section {
+    margin-top: 0;
+
+    padding: 1.5rem 1rem;
+  }
+
+  // stats-section
+  .stats-section {
+    padding: 0rem 1rem;
+    margin-top: 2rem;
+
+  }
+  // conference-section
+  .conference-section {
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+
+    .conference-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .conference-card {
+      .conference-img {
+        height: 180px;
+      }
+
+      .conference-content {
+        padding-top: 0.8rem;
+        h3 {
+          font-size: 1.1rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+          line-height: 1.5;
+        }
+
+        .read-more {
+          font-size: 0.9rem;
+          padding: 0.5rem 1.2rem;
+          width: 100%;
+          text-align: center;
+          clip-path: none;
+        }
+      }
+    }
+  }
+
+  // Awards Section
+  .awards-section {
+    padding: 1.5rem 1rem;
+  }
+  // Speakers Section
+  .speakers-section {
+    padding: 1.5rem 1rem;
+  }
+
+  // Research Section
+  .research-section {
+    padding: 1.5rem 1rem;
+    .publications {
+      padding: 1.5rem 0 0;
+    }
+  }
+  // alumni section
+  .alumni-section {
+    padding: 1.5rem 1rem;
+
+    .grid-links {
+      .mentorship-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  // contact section
+  .contact-section {
+    padding: 1.5rem 1rem;
+
+    h2 {
+      font-size: var(--font-xl);
+    }
+
+    .contact-form {
+      .input-row {
+        flex-direction: column;
+      }
+
+      .angled-button {
+        width: 100%;
+        text-align: center;
+        align-self: stretch;
+        clip-path: none;
+      }
+    }
+  }
 }
 
-/* ---------- For Small Phones (<= 480px) ---------- */
-@media (max-width: 480px) {
-	// hero section
-	.hero {
-		// &__header-bar{
-		//   display: flex;
-		//   flex-direction: column;
-		//   justify-content: space-between;
-		//   align-items: center;
-		// }
-
-		height: 60vh;
-		min-height: 330px;
-
-		&__botom-tagline {
-			font-size: 0.8rem;
-			width: 100%;
-
-			height: 0;
-		}
-
-		&__bottom-strip {
-			display: none;
-		}
-
-		&__nav-strip {
-			height: 70px;
-			&::before {
-				clip-path: none;
-			}
-		}
-
-		&__logo {
-			width: 70px;
-			height: auto;
-		}
-
-		&__ieee-logo,
-		&__menu-toggle {
-			filter: brightness(0) saturate(100%);
-		}
-
-		&__title {
-			font-size: var(--font-semi-xl);
-		}
-	}
-	// .embs-section
-	.embs-section {
-		padding: 2rem 1rem;
-
-		p {
-			font-size: 0.9rem;
-		}
-	}
-
-	//   .mission-vision-section
-	.mission-vision-section {
-		background: var(--white-color);
-		padding: 3rem 2rem;
-
-		.card {
-			border: none;
-			color: var(--white-color);
-			position: relative;
-			overflow: hidden;
-
-
-
-			p {
-				font-size: 0.9rem;
-				line-height: 1.5;
-			}
-		}
-	}
-
-	// ================= EVENTS SECTION =================
-	.events-section {
-		padding: 2rem 1rem;
-
-		.section-title {
-			font-size: var(--font-semi-xl);
-		}
-	}
-
-	// media-section
-	.media-section {
-		padding: 2rem 1rem;
-
-		.section-title {
-			font-size: var(--font-semi-xl);
-		}
-	}
-
-	// .membership-section
-	.membership-section {
-		padding: 2rem 1rem;
-
-		&__content {
-			min-height: 400px;
-			padding: 2rem 1rem;
-		}
-
-		&__title {
-			font-size: 2rem;
-		}
-
-		&__subtitle {
-			font-size: 0.9rem;
-		}
-
-		&__btn {
-			text-align: center;
-			padding: 0.8rem;
-		}
-	}
-
-	// office-bearers-section
-	.office-bearers-section {
-		.section-title {
-			font-size: var(--font-semi-xl);
-		}
-		.bearer-grid {
-			grid-template-columns: 1fr;
-		}
-	}
-
-	// event section
-	.event-section {
-		padding: 2rem 1rem;
-		.event-content {
-			.event-title {
-				font-size: var(--font-semi-xl);
-			}
-			.event-list {
-				.event-item {
-					gap: 1rem;
-					span {
-						font-size: 0.8rem;
-					}
-				}
-			}
-		}
-	}
-
-	// stats-section
-	.stats-section {
-		padding: 2rem 1rem;
-
-		.stats-grid {
-			gap: 1rem;
-			display: flex;
-			flex-direction: column;
-		}
-
-		.stats-box {
-			padding: 1.2rem;
-
-			.stats-details {
-				.stats-number {
-					font-size: 1.8rem;
-				}
-
-				.stats-label {
-					font-size: 0.9rem;
-				}
-			}
-
-			.stats-icon {
-				width: 36px;
-				height: 36px;
-				margin-right: 0.8rem;
-			}
-		}
-	}
-	// conference-section
-	.conference-section {
-		padding: 2rem 1rem;
-
-		.conference-grid {
-			grid-template-columns: 1fr;
-			gap: 1.5rem;
-		}
-
-		.conference-card {
-			.conference-img {
-				height: 180px;
-			}
-
-			.conference-content {
-				padding-top: 0.8rem;
-				h3 {
-					font-size: 1.1rem;
-				}
-
-				p {
-					font-size: 0.9rem;
-					line-height: 1.5;
-				}
-
-				.read-more {
-					font-size: 0.9rem;
-					padding: 0.5rem 1.2rem;
-					width: 100%;
-					text-align: center;
-					clip-path: none;
-				}
-			}
-		}
-	}
-
-	// Awards Section
-	.awards-section {
-		padding: 2rem 1rem;
-
-		.awards-title {
-			font-size: var(--font-semi-xl);
-			margin-bottom: 2rem;
-			text-align: center;
-		}
-
-		.award-item {
-			gap: 1.5rem;
-			margin-bottom: 3rem;
-
-			.award-text {
-				h3 {
-					font-size: 1.1rem;
-				}
-
-				p {
-					font-size: 0.9rem;
-					line-height: 1.5;
-				}
-
-				.read-more-btn {
-					font-size: 0.95rem;
-					padding: 0.5rem 1.2rem;
-					width: 100%;
-					display: block;
-					text-align: center;
-					clip-path: none;
-				}
-			}
-
-			.award-border {
-				.award-image img {
-					width: 100%;
-					scale: 1;
-				}
-			}
-		}
-	}
-	// Speakers Section
-	.speakers-section {
-		padding: 1.5rem 1rem;
-
-		.speakers-intro {
-			h2 {
-				font-size: var(--font-semi-xl);
-			}
-
-			p {
-				font-size: 0.9rem;
-				line-height: 1.5;
-			}
-
-			.nav-buttons button {
-				font-size: 1rem;
-				padding: 0.5rem 0.8rem;
-			}
-		}
-
-		.speakers-list {
-			grid-template-columns: 1fr;
-		}
-
-		.speaker-card {
-			.speaker-info {
-				h4 {
-					font-size: 0.9rem;
-				}
-
-				.affiliation {
-					font-size: 0.9rem;
-				}
-
-				p {
-					font-size: 0.8rem;
-				}
-			}
-		}
-	}
-
-	// Research Section
-	.research-section {
-		padding: 2rem 1rem;
-
-		.research-intro {
-			h2 {
-				font-size: var(--font-semi-xl);
-			}
-
-			.subheading {
-				font-size: 1rem;
-			}
-
-			.description {
-				font-size: 0.9rem;
-			}
-		}
-
-		.labs {
-			.lab-details {
-				padding: 1.5rem 1rem;
-				font-size: 0.9rem;
-
-				p {
-					font-size: 0.9rem;
-				}
-			}
-
-			.lab-list p {
-				font-size: 0.9rem;
-			}
-		}
-
-		.publications {
-			h3 {
-				font-size: 1rem;
-			}
-
-			ul li {
-				font-size: 0.9rem;
-				gap: 0.4rem;
-
-				img {
-					width: 14px;
-					height: 14px;
-					margin-top: 0.4rem;
-				}
-			}
-		}
-	}
-
-	// Alumni Section
-	.alumni-section {
-		padding: 2rem 1rem;
-
-		h2 {
-			font-size: var(--font-semi-xl);
-		}
-
-		.subtitle {
-			font-size: 0.9rem;
-			margin-bottom: 2rem;
-		}
-
-		.alumni-border {
-			.alumni-card {
-				padding: 1rem;
-        gap:calc(1rem + 0.5vw);
-
-				&::before,
-				&::after {
+/* ---------- For Small Phones (<= 576px) ---------- */
+@media (max-width: 576px) {
+  // hero section
+  .hero {
+    height: 60vh;
+    min-height: 330px;
+
+    &__botom-tagline {
+      font-size: 0.8rem;
+      width: 100%;
+
+      height: 0;
+    }
+
+    &__bottom-strip {
+      display: none;
+    }
+
+    &__nav-strip {
+      height: 70px;
+      &::before {
+        clip-path: none;
+      }
+    }
+
+    &__logo {
+      width: 70px;
+      height: auto;
+    }
+
+    &__ieee-logo,
+    &__menu-toggle {
+      filter: brightness(0) saturate(100%);
+    }
+
+    &__title {
+      font-size: var(--font-semi-xl);
+    }
+  }
+  // .embs-section
+  .embs-section {
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  //   .mission-vision-section
+  .mission-vision-section {
+    background: var(--white-color);
+
+    .card {
+      border: none;
+      color: var(--white-color);
+      position: relative;
+      overflow: hidden;
+
+      p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  // ================= EVENTS SECTION =================
+  .events-section {
+    .section-title {
+      font-size: var(--font-semi-xl);
+    }
+  }
+
+  // media-section
+  .media-section {
+    .section-title {
+      font-size: var(--font-semi-xl);
+    }
+  }
+
+  // .membership-section
+  .membership-section {
+    &__content {
+      min-height: 400px;
+      padding: 2rem 1rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__subtitle {
+      font-size: 0.9rem;
+    }
+
+    &__btn {
+      text-align: center;
+      padding: 0.8rem;
+    }
+  }
+
+  // office-bearers-section
+  .office-bearers-section {
+    .section-title {
+      font-size: var(--font-semi-xl);
+    }
+    .bearer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // event section
+  .event-section {
+    .event-content {
+      .event-title {
+        font-size: var(--font-semi-xl);
+      }
+      .event-list {
+        .event-item {
+          gap: 1rem;
+          span {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  // stats-section
+  .stats-section {
+    .stats-grid {
+      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stats-box {
+      padding: 1.2rem;
+
+      .stats-details {
+        .stats-number {
+          font-size: 1.8rem;
+        }
+
+        .stats-label {
+          font-size: 0.9rem;
+        }
+      }
+
+      .stats-icon {
+        width: 36px;
+        height: 36px;
+        margin-right: 0.8rem;
+      }
+    }
+  }
+  // conference-section
+  .conference-section {
+    .conference-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .conference-card {
+      .conference-img {
+        height: 180px;
+      }
+
+      .conference-content {
+        padding-top: 0.8rem;
+        h3 {
+          font-size: 1.1rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+          line-height: 1.5;
+        }
+
+        .read-more {
+          font-size: 0.9rem;
+          padding: 0.5rem 1.2rem;
+          width: 100%;
+          text-align: center;
+          clip-path: none;
+        }
+      }
+    }
+  }
+
+  // Awards Section
+  .awards-section {
+    .awards-title {
+      font-size: var(--font-semi-xl);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .award-item {
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+
+      .award-text {
+        h3 {
+          font-size: 1.1rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+          line-height: 1.5;
+        }
+
+        .read-more-btn {
+          font-size: 0.95rem;
+          padding: 0.5rem 1.2rem;
+          width: 100%;
+          display: block;
+          text-align: center;
+          clip-path: none;
+        }
+      }
+
+      .award-border {
+        .award-image img {
+          width: 100%;
+          scale: 1;
+        }
+      }
+    }
+  }
+  // Speakers Section
+  .speakers-section {
+    .speakers-intro {
+      h2 {
+        font-size: var(--font-semi-xl);
+      }
+
+      p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      .nav-buttons button {
+        font-size: 1rem;
+        padding: 0.5rem 0.8rem;
+      }
+    }
+
+    .speaker-card {
+      .speaker-info {
+        h4 {
+          font-size: var(--font-sm);
+        }
+
+        .affiliation {
+          font-size: var(--font-sm);
+        }
+
+        p {
+          font-size: var(--font-xs);
+        }
+      }
+    }
+  }
+
+  // Research Section
+  .research-section {
+    .research-intro {
+      h2 {
+        font-size: var(--font-semi-xl);
+      }
+
+      .subheading {
+        font-size: 1rem;
+      }
+
+      .description {
+        font-size: 0.9rem;
+      }
+    }
+
+    .labs {
+      .lab-details {
+        padding: 1.5rem 1rem;
+        font-size: 0.9rem;
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+
+      .lab-list p {
+        font-size: 0.9rem;
+      }
+    }
+
+    .publications {
+      h3 {
+        font-size: 1rem;
+      }
+
+      ul li {
+        font-size: 0.9rem;
+        gap: 0.4rem;
+
+        img {
+          width: 14px;
+          height: 14px;
+          margin-top: 0.4rem;
+        }
+      }
+    }
+  }
+
+  // Alumni Section
+  .alumni-section {
+    h2 {
+      font-size: var(--font-semi-xl);
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+
+    .alumni-border {
+      .alumni-card {
+        padding: 1rem;
+        gap: calc(1rem + 0.5vw);
+
+        &::before,
+        &::after {
           display: none;
-					bottom: -14rem;
-					right: -15.5rem;
-				}
+          bottom: -14rem;
+          right: -15.5rem;
+        }
 
-				.alumni-info {
-					.alumni-header {
-						flex-direction: column;
+        .alumni-info {
+          .alumni-header {
+            flex-direction: column;
             align-items: center;
             gap: 1.5rem;
-					}
+          }
 
-					.description {
-						font-size: 0.85rem;
-					}
+          .description {
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
 
-       
-				}
-			}
-		}
+    .grid-links ul li {
+      font-size: 0.85rem;
+    }
+  }
 
-		.grid-links ul li {
-			font-size: 0.85rem;
-		}
-	}
+  
 
-	// Contact Section
-	.contact-section {
-		width: 100%;
-		padding: 1.5rem 1rem;
+  // Contact Section
+  .contact-section {
+    .section-title {
+      font-size: var(--font-semi-xl);
+      margin-bottom: 1rem;
+    }
+  }
 
-		h2 {
-			font-size: var(--font-semi-xl);
-			margin-bottom: 1rem;
-		}
-	}
-
-	// footer Section
-	.site-footer {
-		.footer-left {
-			font-size: 0.8rem;
-			flex-wrap: wrap;
-		}
-		.footer-right {
-			font-size: 0.8rem;
-		}
-	}
+  // footer Section
+  .site-footer {
+    
+    .footer-left {
+      font-size: 0.8rem;
+      gap: 0.5rem;
+      grid-template-columns: 1fr;
+    }
+    .footer-right {
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  }
 }
