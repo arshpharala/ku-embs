@@ -519,6 +519,14 @@
 @media (max-width: 768px) {
   // hero section
   .hero {
+    &__nav-strip {
+      padding: 0 1rem;
+    }
+
+    &__overlay {
+      padding: 0 1rem;
+    }
+
     &__logo {
       width: 110px;
       height: auto;
@@ -578,7 +586,6 @@
   .stats-section {
     padding: 0rem 1rem;
     margin-top: 2rem;
-
   }
   // conference-section
   .conference-section {
@@ -605,14 +612,6 @@
         p {
           font-size: 0.9rem;
           line-height: 1.5;
-        }
-
-        .read-more {
-          font-size: 0.9rem;
-          padding: 0.5rem 1.2rem;
-          width: 100%;
-          text-align: center;
-          clip-path: none;
         }
       }
     }
@@ -843,11 +842,11 @@
           font-size: 0.9rem;
           line-height: 1.5;
         }
-
         .read-more {
-          font-size: 0.9rem;
+          font-size: 0.95rem;
           padding: 0.5rem 1.2rem;
           width: 100%;
+          display: block;
           text-align: center;
           clip-path: none;
         }
@@ -1021,8 +1020,6 @@
     }
   }
 
-  
-
   // Contact Section
   .contact-section {
     .section-title {
@@ -1033,7 +1030,6 @@
 
   // footer Section
   .site-footer {
-    
     .footer-left {
       font-size: 0.8rem;
       gap: 0.5rem;
