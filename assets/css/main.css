@@ -1737,7 +1737,7 @@ p {
   .conference-section .conference-card .conference-content .read-more {
     font-size: 0.95rem;
     padding: 0.5rem 1.2rem;
-    width: 100%;
+    width: calc(100% - 20.5px);
     display: block;
     text-align: center;
     clip-path: none;
@@ -1762,6 +1762,7 @@ p {
     font-size: 0.95rem;
     padding: 0.5rem 1.2rem;
     width: 100%;
+    width: calc(100% - 20.5px);
     display: block;
     text-align: center;
     clip-path: none;
