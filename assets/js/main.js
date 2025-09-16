@@ -73,8 +73,8 @@ function enableSwipe(
 }
 
 // ================= INIT CAROUSELS =================
-enableSwipe("#eventsCarousel"); // Events
-enableSwipe("#mediaCarousel", "mediaPrev", "mediaNext"); // Media
+// enableSwipe("#eventsCarousel"); // Events
+// enableSwipe("#mediaCarousel", "mediaPrev", "mediaNext"); // Media
 enableSwipe("#speakersCarousel", "speakersPrev", "speakersNext"); // Speakers
 enableSwipe("#alumniCarousel", null, 'alumniNext', true);
 

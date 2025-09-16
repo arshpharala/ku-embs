@@ -340,10 +340,10 @@ p {
   }
 
   .event-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    // display: flex;
+    // grid-template-columns: repeat(3, 1fr);
     margin: 1rem 0;
-    gap: 1rem;
+    // gap: 1rem;
 
     .event-card {
       border-radius: 6px;

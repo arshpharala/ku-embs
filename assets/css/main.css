@@ -325,10 +325,7 @@ p {
   color: var(--black-color);
 }
 .events-section .event-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   margin: 1rem 0;
-  gap: 1rem;
 }
 .events-section .event-cards .event-card {
   border-radius: 6px;
@@ -567,12 +564,10 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
+  transition: background-color 0.3s;
 }
 .event-section .event-content .event-list .event-item:nth-child(odd) {
   background-color: #e0e0e0;
-}
-.event-section .event-content .event-list .event-item {
-  transition: background-color 0.3s;
 }
 .event-section .event-content .event-list .event-item:hover {
   background-color: #f1f1f1;
@@ -891,6 +886,8 @@ p {
   color: var(--white-color);
   padding: var(--margin-section) 0;
   text-align: center;
+  /* inner sub-box */
+  /* Alumni Carousel - Vertical Slide */
 }
 .alumni-section .section-title {
   color: var(--white-color);
@@ -997,9 +994,6 @@ p {
   border: 2px solid #0072c6; /* outer box */
   position: relative; /* required for pseudo-element positioning */
 }
-.alumni-section {
-  /* inner sub-box */
-}
 .alumni-section .active-box::after {
   content: "";
   width: 12px;
@@ -1045,9 +1039,6 @@ p {
 }
 .alumni-section .grid-links ul li img {
   margin-right: 0.5rem;
-}
-.alumni-section {
-  /* Alumni Carousel - Vertical Slide */
 }
 .alumni-section .carousel.top-to-bottom .carousel-inner {
   height: 100%;
