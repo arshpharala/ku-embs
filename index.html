@@ -8,17 +8,19 @@
     <!-- Bootstrap Grid only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" />
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <!-- Our custom SCSS (compiled to CSS) -->
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body>
     <!-- ================= HERO SECTION ================= -->
-    <header class="hero">
+    <header id="home" class="hero">
       <!-- White navigation strip -->
       <div class="hero__nav-strip">
         <div class="container">
@@ -28,11 +30,13 @@
               <img
                 src="assets/images/embs-logo.png"
                 alt="IEEE EMBS"
-                class="hero__logo" />
+                class="hero__logo"
+              />
               <img
                 src="assets/images/ku-logo.png"
                 alt="Khalifa University"
-                class="hero__logo" />
+                class="hero__logo"
+              />
             </div>
 
             <!-- Right Logo + Menu -->
@@ -40,10 +44,37 @@
               <img
                 src="assets/images/ieee-logo.png"
                 alt="IEEE"
-                class="hero__logo hero__ieee-logo me-3" />
-              <button class="hero__menu-toggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-              </button>
+                class="hero__logo hero__ieee-logo me-3"
+              />
+              <!-- Menu Toggle -->
+              <div class="hero__menu-toggle" aria-label="Menu">
+                <input id="checkbox2" type="checkbox" />
+                <label class="toggle toggle2" for="checkbox2">
+                  <div id="bar4" class="bars"></div>
+                  <div id="bar5" class="bars"></div>
+                  <div id="bar6" class="bars"></div>
+                </label>
+
+                <!-- Dropdown menu -->
+                <!-- Dropdown menu -->
+                <ul class="dropdown">
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#about">About Us</a></li>
+                  <li><a href="#upcoming-events ">Upcoming Events</a></li>
+                  <li><a href="#team">Team</a></li>
+                  <li>
+                    <a href="#events-&-achievements ">Events & Achievements </a>
+                  </li>
+                    <li>
+                    <a href="#conference ">Conference </a>
+                  </li>
+                  <li><a href="#awards">Awards and Milestones</a></li>
+                  <li><a href="#speakers">Distinguished Speakers</a></li>
+                  <li><a href="#research"> Research & Projects </a></li>
+                  <li><a href="#alumni">Alumni & Networking</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -69,7 +100,8 @@
             <img
               src="assets/images/pin-drop-icon.png"
               alt="Location Icon"
-              class="hero__location-icon" />
+              class="hero__location-icon"
+            />
             Khalifa University, Main Campus, Building B, 2nd Floor
           </div>
         </div>
@@ -80,7 +112,7 @@
     </header>
 
     <!-- ================= EMBS SECTION ================= -->
-    <section class="embs-section">
+    <section id="about" class="embs-section">
       <div class="container">
         <div class="col-md-12">
           <p>
@@ -142,7 +174,7 @@
     </section>
 
     <!-- ================= UPCOMING EVENTS SECTION ================= -->
-    <section class="events-section">
+    <section id="upcoming-events" class="events-section">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -151,96 +183,128 @@
         </div>
 
         <!-- Bootstrap Carousel -->
-        <div>
-          <div>
+        <div
+          id="eventsCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-touch="true"
+        >
+          <div class="carousel-inner">
             <!-- First Slide -->
-            <div>
-              <div class="row event-cards event-slider">
-                <div class="col-md-4 col-12 mt-3 mt-md-0">
-                  <div class="event-card">
-                    <img
-                      src="assets/images/biocas-logo.png"
-                      class="event-card__logo"
-                      alt="BioCAS 2025" />
-                    <p class="event-card__desc">
-                      21st IEEE Biomedical Circuits and Systems Conference
-                    </p>
-                  </div>
+            <div class="carousel-item active">
+              <div class="event-cards">
+                <div class="event-card">
+                  <img
+                    src="assets/images/biocas-logo.png"
+                    class="event-card__logo"
+                    alt="BioCAS 2025"
+                  />
+                  <p class="event-card__desc">
+                    21st IEEE Biomedical Circuits and Systems Conference
+                  </p>
                 </div>
-                <div class="col-md-4 col-12 mt-3 mt-md-0">
-                  <div class="event-card">
-                    <img
-                      src="assets/images/biocas-logo.png"
-                      class="event-card__logo"
-                      alt="BioCAS 2025" />
-                    <p class="event-card__desc">
-                      21st IEEE Biomedical Circuits and Systems Conference
-                    </p>
-                  </div>
+
+                <div class="event-card">
+                  <img
+                    src="assets/images/biocas-logo.png"
+                    class="event-card__logo"
+                    alt="BioCAS 2025"
+                  />
+                  <p class="event-card__desc">
+                    21st IEEE Biomedical Circuits and Systems Conference
+                  </p>
                 </div>
-                <div class="col-md-4 col-12 mt-3 mt-md-0">
-                  <div class="event-card">
-                    <img
-                      src="assets/images/biocas-logo.png"
-                      class="event-card__logo"
-                      alt="BioCAS 2025" />
-                    <p class="event-card__desc">
-                      21st IEEE Biomedical Circuits and Systems Conference
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-4 col-12 mt-3 mt-md-0">
-                  <div class="event-card">
-                    <img
-                      src="assets/images/biocas-logo.png"
-                      class="event-card__logo"
-                      alt="BioCAS 2025" />
-                    <p class="event-card__desc">
-                      21st IEEE Biomedical Circuits and Systems Conference
-                    </p>
-                  </div>
+
+                <div class="event-card">
+                  <img
+                    src="assets/images/biocas-logo.png"
+                    class="event-card__logo"
+                    alt="BioCAS 2025"
+                  />
+                  <p class="event-card__desc">
+                    21st IEEE Biomedical Circuits and Systems Conference
+                  </p>
                 </div>
               </div>
             </div>
 
+            <!-- Second Slide -->
+            <div class="carousel-item">
+              <div class="event-cards">
+                <div class="event-card">
+                  <img
+                    src="assets/images/biocas-logo.png"
+                    class="event-card__logo"
+                    alt="Event 4"
+                  />
+                  <p class="event-card__desc">Another Conference Example</p>
+                </div>
+
+                <div class="event-card">
+                  <img
+                    src="assets/images/biocas-logo.png"
+                    class="event-card__logo"
+                    alt="Event 5"
+                  />
+                  <p class="event-card__desc">Another Conference Example</p>
+                </div>
+
+                <div class="event-card">
+                  <img
+                    src="assets/images/biocas-logo.png"
+                    class="event-card__logo"
+                    alt="Event 6"
+                  />
+                  <p class="event-card__desc">Another Conference Example</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ================= MEDIA SECTION ================= -->
-    <section class="media-section">
+    <section id="media" class="media-section">
       <div class="container">
         <div class="d-flex justify-content-between align-items-center">
           <h2 class="section-title">Media</h2>
-          <div class="media-section__nav" id="media-slider-controls">
+          <div class="media-section__nav">
             <button id="mediaPrev">
               <img
                 src="assets/images/arrow-left.png"
                 alt="arrow"
-                class="arrow" />
+                class="arrow"
+              />
             </button>
             <button id="mediaNext">
               <img
                 src="assets/images/arrow-right.png"
                 alt="arrow"
-                class="arrow" />
+                class="arrow"
+              />
             </button>
           </div>
         </div>
 
         <!-- Bootstrap Carousel -->
-        <div>
-          <div>
+        <div
+          id="mediaCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-touch="true"
+        >
+          <div class="carousel-inner">
             <!-- First Slide -->
-            <div>
-              <div class="row media-cards media-slider">
+            <div class="carousel-item active">
+              <div class="row media-cards">
                 <div class="col-md-4 col-12 mt-3 mt-md-0">
                   <div class="media-card">
                     <img
                       src="assets/images/media-1.png"
                       alt="Media 1"
-                      class="img-fluid" />
+                      class="img-fluid"
+                    />
                   </div>
                 </div>
                 <div class="col-md-4 col-12 mt-3 mt-md-0">
@@ -248,7 +312,8 @@
                     <img
                       src="assets/images/media-2.png"
                       alt="Media 2"
-                      class="img-fluid" />
+                      class="img-fluid"
+                    />
                   </div>
                 </div>
                 <div class="col-md-4 col-12 mt-3 mt-md-0">
@@ -256,27 +321,52 @@
                     <img
                       src="assets/images/media-1.png"
                       alt="Media 3"
-                      class="img-fluid" />
+                      class="img-fluid"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Slide -->
+            <div class="carousel-item">
+              <div class="row media-cards">
+                <div class="col-md-4 col-12 mt-3 mt-md-0">
+                  <div class="media-card">
+                    <img
+                      src="assets/images/media-2.png"
+                      alt="Media 4"
+                      class="img-fluid"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4 col-12 mt-3 mt-md-0">
+                  <div class="media-card">
+                    <img
+                      src="assets/images/media-1.png"
+                      alt="Media 5"
+                      class="img-fluid"
+                    />
                   </div>
                 </div>
                 <div class="col-md-4 col-12 mt-3 mt-md-0">
                   <div class="media-card">
                     <img
                       src="assets/images/media-2.png"
-                      alt="Media 2"
-                      class="img-fluid" />
+                      alt="Media 6"
+                      class="img-fluid"
+                    />
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </section>
 
     <!-- ================= MEMBERSHIP SECTION ================= -->
-    <section class="membership-section">
+    <section id="membership" class="membership-section">
       <div class="container p-0">
         <div class="row g-0">
           <!-- Left Content -->
@@ -294,12 +384,13 @@
         <img
           src="assets/images/membership.png"
           alt="membership"
-          class="member-image d-none d-md-flex" />
+          class="member-image d-none d-md-flex"
+        />
       </div>
     </section>
 
     <!-- ================= OFFICE BEARERS SECTION ================= -->
-    <section class="office-bearers-section">
+    <section id="team" class="office-bearers-section">
       <div class="container">
         <div class="row">
           <div class="col-12 mb-5">
@@ -315,7 +406,8 @@
               <img
                 src="assets/images/member-1.png"
                 alt="Rateb Katmah"
-                class="bearer-card__photo" />
+                class="bearer-card__photo"
+              />
             </div>
 
             <div class="bearer-card__role">President (PG)</div>
@@ -331,7 +423,8 @@
               <img
                 src="assets/images/member-1.png"
                 alt="Rateb Katmah"
-                class="bearer-card__photo" />
+                class="bearer-card__photo"
+              />
             </div>
             <div class="bearer-card__role">President (PG)</div>
             <div class="bearer-card__info">
@@ -346,7 +439,8 @@
               <img
                 src="assets/images/member-1.png"
                 alt="Rateb Katmah"
-                class="bearer-card__photo" />
+                class="bearer-card__photo"
+              />
             </div>
             <div class="bearer-card__role">President (PG)</div>
             <div class="bearer-card__info">
@@ -361,7 +455,7 @@
 
     <!-- event and achievements section -->
 
-    <section class="event-section">
+    <section id="events-&-achievements" class="event-section">
       <div class="container">
         <div class="event-content">
           <h1 class="event-title section-title">
@@ -369,13 +463,15 @@
           </h1>
           <div class="event-list">
             <article class="event-item">
-              <span>Lasers in Life Sciences: From 3D Bio Printing to
-                Sensing</span>
+              <span
+                >Lasers in Life Sciences: From 3D Bio Printing to Sensing</span
+              >
               <a href="#" class="event-link">
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
               </a>
             </article>
             <article class="event-item">
@@ -384,7 +480,8 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
               </a>
             </article>
             <article class="event-item">
@@ -393,7 +490,8 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
               </a>
             </article>
             <article class="event-item">
@@ -402,7 +500,8 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
               </a>
             </article>
             <article class="event-item">
@@ -411,7 +510,8 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
               </a>
             </article>
             <article class="event-item">
@@ -420,7 +520,8 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
               </a>
             </article>
             <article class="event-item">
@@ -429,7 +530,8 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
               </a>
             </article>
             <article class="event-item">
@@ -438,17 +540,20 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
               </a>
             </article>
             <article class="event-item">
-              <span>Mastering Ubuntu and Python: A Hands-On Coding
-                Workshop</span>
+              <span
+                >Mastering Ubuntu and Python: A Hands-On Coding Workshop</span
+              >
               <a href="#" class="event-link">
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
               </a>
             </article>
             <article class="event-item">
@@ -457,7 +562,8 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
               </a>
             </article>
             <article class="event-item">
@@ -466,7 +572,8 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
               </a>
             </article>
             <article class="event-item">
@@ -475,7 +582,8 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
               </a>
             </article>
           </div>
@@ -484,14 +592,15 @@
     </section>
 
     <!-- stats section  -->
-    <section class="stats-section">
+    <section id="stats" class="stats-section">
       <div class="container">
         <div class="stats-grid">
           <div class="stats-box stats-members">
             <img
               src="assets/images/grop-users-icon.png"
               alt="team"
-              class="stats-icon" />
+              class="stats-icon"
+            />
             <div class="stats-details">
               <h2 class="stats-number">260</h2>
               <p class="stats-label">Members</p>
@@ -502,7 +611,8 @@
             <img
               src="assets/images/event-icon.png"
               alt="team"
-              class="stats-icon" />
+              class="stats-icon"
+            />
             <div class="stats-details">
               <h2 class="stats-number">11</h2>
               <p class="stats-label">Events</p>
@@ -513,7 +623,8 @@
             <img
               src="assets/images/send-icon.png"
               alt="team"
-              class="stats-icon" />
+              class="stats-icon"
+            />
             <div class="stats-details">
               <h2 class="stats-number">986</h2>
               <p class="stats-label">Guests Invited</p>
@@ -524,7 +635,7 @@
     </section>
 
     <!-- conference-section -->
-    <section class="conference-section">
+    <section id="conference" class="conference-section">
       <div class="container">
         <div class="conference-grid">
           <!-- CARD 1 -->
@@ -532,7 +643,8 @@
             <img
               src="assets/images/group.png"
               alt="Conference Image"
-              class="conference-img" />
+              class="conference-img"
+            />
             <div class="conference-content">
               <h3>21st IEEE Biomedical Circuits and Systems Conference</h3>
               <p>
@@ -542,9 +654,9 @@
                 Applications” on Wednesday, February 19, 2025, at the Main
                 Campus Auditorium.
               </p>
-              <a href="#"
-                class="button-shape button-shape-primary read-more">Read
-                More</a>
+              <a href="#" class="button-shape button-shape-primary read-more"
+                >Read More</a
+              >
             </div>
           </div>
 
@@ -553,7 +665,8 @@
             <img
               src="assets/images/group.png"
               alt="Conference Image"
-              class="conference-img" />
+              class="conference-img"
+            />
             <div class="conference-content">
               <h3>21st IEEE Biomedical Circuits and Systems Conference</h3>
               <p>
@@ -563,9 +676,9 @@
                 Applications” on Wednesday, February 19, 2025, at the Main
                 Campus Auditorium.
               </p>
-              <a href="#"
-                class="button-shape button-shape-primary read-more">Read
-                More</a>
+              <a href="#" class="button-shape button-shape-primary read-more"
+                >Read More</a
+              >
             </div>
           </div>
 
@@ -574,7 +687,8 @@
             <img
               src="assets/images/group.png"
               alt="Conference Image"
-              class="conference-img" />
+              class="conference-img"
+            />
             <div class="conference-content">
               <h3>21st IEEE Biomedical Circuits and Systems Conference</h3>
               <p>
@@ -584,9 +698,9 @@
                 Applications” on Wednesday, February 19, 2025, at the Main
                 Campus Auditorium.
               </p>
-              <a href="#"
-                class="button-shape button-shape-primary read-more">Read
-                More</a>
+              <a href="#" class="button-shape button-shape-primary read-more"
+                >Read More</a
+              >
             </div>
           </div>
 
@@ -595,7 +709,8 @@
             <img
               src="assets/images/group.png"
               alt="Conference Image"
-              class="conference-img" />
+              class="conference-img"
+            />
             <div class="conference-content">
               <h3>21st IEEE Biomedical Circuits and Systems Conference</h3>
               <p>
@@ -605,9 +720,9 @@
                 Applications” on Wednesday, February 19, 2025, at the Main
                 Campus Auditorium.
               </p>
-              <a href="#"
-                class="button-shape button-shape-primary read-more">Read
-                More</a>
+              <a href="#" class="button-shape button-shape-primary read-more"
+                >Read More</a
+              >
             </div>
           </div>
         </div>
@@ -615,7 +730,7 @@
     </section>
 
     <!-- // award and milestone section  -->
-    <section class="awards-section">
+    <section id="awards" class="awards-section">
       <div class="container">
         <h2 class="awards-title">Awards and Milestones</h2>
 
@@ -634,9 +749,9 @@
               Engineering in Medicine and Biology Society through impactful
               student engagement.
             </p>
-            <a href="#"
-              class="button-shape button-shape-light read-more-btn">Read
-              More</a>
+            <a href="#" class="button-shape button-shape-light read-more-btn"
+              >Read More</a
+            >
           </div>
         </div>
 
@@ -650,9 +765,9 @@
               Engineering in Medicine and Biology Society through impactful
               student engagement.
             </p>
-            <a href="#"
-              class="button-shape button-shape-light read-more-btn">Read
-              More</a>
+            <a href="#" class="button-shape button-shape-light read-more-btn"
+              >Read More</a
+            >
           </div>
           <div class="award-border">
             <div class="award-image">
@@ -664,7 +779,7 @@
     </section>
 
     <!-- speakers-section -->
-    <section class="speakers-section">
+    <section id="speakers" class="speakers-section">
       <div class="container">
         <div class="speakers-container">
           <!-- Left Column -->
@@ -684,13 +799,15 @@
                 <img
                   src="assets/images/arrow-left.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
               </button>
               <button id="speakersNext">
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
               </button>
             </div>
           </div>
@@ -700,7 +817,8 @@
             id="speakersCarousel"
             class="carousel slide"
             data-bs-ride="carousel"
-            data-bs-touch="true">
+            data-bs-touch="true"
+          >
             <div class="carousel-inner">
               <!-- First Slide -->
               <div class="carousel-item active">
@@ -711,7 +829,8 @@
                       <img
                         src="assets/images/speaker.png"
                         alt="Prof. Jonathan Knowles"
-                        class="img-fluid w-100" />
+                        class="img-fluid w-100"
+                      />
                     </div>
                     <div class="speaker-info">
                       <h4>Prof. Jonathan Knowles</h4>
@@ -728,7 +847,8 @@
                       <img
                         src="assets/images/speaker.png"
                         alt="Prof. Jane Doe"
-                        class="img-fluid w-100" />
+                        class="img-fluid w-100"
+                      />
                     </div>
                     <div class="speaker-info">
                       <h4>Prof. Jane Doe</h4>
@@ -751,7 +871,8 @@
                       <img
                         src="assets/images/speaker.png"
                         alt="Dr. Alex Smith"
-                        class="img-fluid w-100" />
+                        class="img-fluid w-100"
+                      />
                     </div>
                     <div class="speaker-info">
                       <h4>Dr. Alex Smith</h4>
@@ -768,7 +889,8 @@
                       <img
                         src="assets/images/speaker.png"
                         alt="Dr. Maria Lopez"
-                        class="img-fluid w-100" />
+                        class="img-fluid w-100"
+                      />
                     </div>
                     <div class="speaker-info">
                       <h4>Dr. Maria Lopez</h4>
@@ -785,7 +907,7 @@
     </section>
 
     <!-- research-section -->
-    <section class="research-section">
+    <section id="research" class="research-section">
       <div class="container">
         <div class="research-intro">
           <h2 class="section-title">Research & Projects</h2>
@@ -808,7 +930,8 @@
               data-bs-target="#lab1"
               role="tab"
               aria-controls="lab1"
-              aria-selected="true">
+              aria-selected="true"
+            >
               Laboratory of Bioelectronics & Biosystems on Chip
             </p>
             <p
@@ -818,7 +941,8 @@
               data-bs-target="#lab2"
               role="tab"
               aria-controls="lab2"
-              aria-selected="false">
+              aria-selected="false"
+            >
               The Rehabilitation Lab
             </p>
             <p
@@ -828,7 +952,8 @@
               data-bs-target="#lab3"
               role="tab"
               aria-controls="lab3"
-              aria-selected="false">
+              aria-selected="false"
+            >
               The MedXAI research group
             </p>
           </div>
@@ -838,7 +963,8 @@
               class="tab-pane fade show active"
               id="lab1"
               role="tabpanel"
-              aria-labelledby="lab1-tab">
+              aria-labelledby="lab1-tab"
+            >
               <p>
                 Laboratory of Bioelectronics & Biosystems on Chip – led by Dr.
                 Anna-Maria Pappa –
@@ -858,7 +984,8 @@
               class="tab-pane fade"
               id="lab2"
               role="tabpanel"
-              aria-labelledby="lab2-tab">
+              aria-labelledby="lab2-tab"
+            >
               <p>
                 The Rehabilitation Lab focuses on rehabilitation engineering,
                 assistive devices, and recovery-focused research. It supports
@@ -871,7 +998,8 @@
               class="tab-pane fade"
               id="lab3"
               role="tabpanel"
-              aria-labelledby="lab3-tab">
+              aria-labelledby="lab3-tab"
+            >
               <p>
                 The MedXAI research group combines AI with medical imaging and
                 diagnostics. Their goal is to enhance clinical decision-making
@@ -888,7 +1016,8 @@
               <img
                 src="assets/images/arrow-right.png"
                 alt="arrow"
-                class="arrow" />
+                class="arrow"
+              />
               Adaptation Robotics and Cognitive Load: Use of a Supernumerary
               Finger for Activities of Daily Living.
             </li>
@@ -896,7 +1025,8 @@
               <img
                 src="assets/images/arrow-right.png"
                 alt="arrow"
-                class="arrow" />
+                class="arrow"
+              />
               Musculoskeletal model predictions sensitivity to upper body mass
               scaling during gait.
             </li>
@@ -904,7 +1034,8 @@
               <img
                 src="assets/images/arrow-right.png"
                 alt="arrow"
-                class="arrow" />
+                class="arrow"
+              />
               Deep Learning Models to Predict Hip Joint Kinetics From Kinematics
               During Gait.
             </li>
@@ -912,7 +1043,8 @@
               <img
                 src="assets/images/arrow-right.png"
                 alt="arrow"
-                class="arrow" />
+                class="arrow"
+              />
               A Methodology for Quantifying Neurological Adaptation to
               Physiotherapy in ACL-Injured Patients through Muscle Activity and
               Brain Connectivity Analysis.
@@ -921,7 +1053,8 @@
               <img
                 src="assets/images/arrow-right.png"
                 alt="arrow"
-                class="arrow" />
+                class="arrow"
+              />
               A Ratiometric Conducting Polymer Redox Electrode Comprising of a
               Functionalized MOF for Dual Signal Bioelectronic Sensing.
             </li>
@@ -929,7 +1062,8 @@
               <img
                 src="assets/images/arrow-right.png"
                 alt="arrow"
-                class="arrow" />
+                class="arrow"
+              />
               Data-driven analysis for the evaluation of cortical mechanics of
               non-adherent cells
             </li>
@@ -937,7 +1071,8 @@
               <img
                 src="assets/images/arrow-right.png"
                 alt="arrow"
-                class="arrow" />
+                class="arrow"
+              />
               Bacterial Membrane Mimetics: From Biosensing to Disease Prevention
               and Treatment
             </li>
@@ -945,7 +1080,8 @@
               <img
                 src="assets/images/arrow-right.png"
                 alt="arrow"
-                class="arrow" />
+                class="arrow"
+              />
               Revealing Bioremediation Potential of Novel Indigenous Bacteria
               from Oil-Contaminated Sites in the UAE: A Combined Bioinformatics
               and Experimental Approach
@@ -956,7 +1092,7 @@
     </section>
 
     <!-- alumni-section -->
-    <section class="alumni-section">
+    <section id="alumni" class="alumni-section">
       <div class="container">
         <h2 class="section-title">Alumni & Networking</h2>
         <p class="subtitle">Success stories of KU EMBS alumni</p>
@@ -964,7 +1100,8 @@
         <div
           id="alumniCarousel"
           class="carousel slide top-to-bottom"
-          data-bs-ride="carousel">
+          data-bs-ride="carousel"
+        >
           <div class="carousel-inner">
             <!-- Slide 1 -->
             <div class="carousel-item active">
@@ -974,7 +1111,8 @@
                     <div class="alumni-image">
                       <img
                         src="assets/images/dr-halima-alnaqbi.png"
-                        alt="Dr. Halima Alnaqbi" />
+                        alt="Dr. Halima Alnaqbi"
+                      />
                     </div>
                     <div class="alumni-info">
                       <div class="alumni-header">
@@ -983,7 +1121,8 @@
                           <img
                             src="assets/images/mail-icon.png"
                             class="icon"
-                            alt="email icon" />
+                            alt="email icon"
+                          />
                           halima.alnaqbi@ku.ac.ae
                         </p>
                       </div>
@@ -1010,19 +1149,23 @@
                   <div
                     class="box active-box"
                     data-bs-target="#alumniCarousel"
-                    data-bs-slide-to="0"></div>
+                    data-bs-slide-to="0"
+                  ></div>
                   <div
                     class="box"
                     data-bs-target="#alumniCarousel"
-                    data-bs-slide-to="1"></div>
+                    data-bs-slide-to="1"
+                  ></div>
                   <div
                     class="box"
                     data-bs-target="#alumniCarousel"
-                    data-bs-slide-to="2"></div>
+                    data-bs-slide-to="2"
+                  ></div>
                   <img
                     src="assets/images/arrow-down.png"
                     id="alumniNext"
-                    alt="arrow" />
+                    alt="arrow"
+                  />
                 </div>
               </div>
             </div>
@@ -1035,7 +1178,8 @@
                     <div class="alumni-image">
                       <img
                         src="assets/images/dr-halima-alnaqbi.png"
-                        alt="Dr. John Smith" />
+                        alt="Dr. John Smith"
+                      />
                     </div>
                     <div class="alumni-info">
                       <div class="alumni-header">
@@ -1044,7 +1188,8 @@
                           <img
                             src="assets/images/mail-icon.png"
                             class="icon"
-                            alt="email icon" />
+                            alt="email icon"
+                          />
                           john.smith@ku.ac.ae
                         </p>
                       </div>
@@ -1071,19 +1216,23 @@
                   <div
                     class="box"
                     data-bs-target="#alumniCarousel"
-                    data-bs-slide-to="0"></div>
+                    data-bs-slide-to="0"
+                  ></div>
                   <div
                     class="box active-box"
                     data-bs-target="#alumniCarousel"
-                    data-bs-slide-to="1"></div>
+                    data-bs-slide-to="1"
+                  ></div>
                   <div
                     class="box"
                     data-bs-target="#alumniCarousel"
-                    data-bs-slide-to="2"></div>
+                    data-bs-slide-to="2"
+                  ></div>
                   <img
                     src="assets/images/arrow-down.png"
                     id="alumniNext"
-                    alt="arrow" />
+                    alt="arrow"
+                  />
                 </div>
               </div>
             </div>
@@ -1096,7 +1245,8 @@
                     <div class="alumni-image">
                       <img
                         src="assets/images/dr-halima-alnaqbi.png"
-                        alt="Dr. Fatima Ahmed" />
+                        alt="Dr. Fatima Ahmed"
+                      />
                     </div>
                     <div class="alumni-info">
                       <div class="alumni-header">
@@ -1105,7 +1255,8 @@
                           <img
                             src="assets/images/mail-icon.png"
                             class="icon"
-                            alt="email icon" />
+                            alt="email icon"
+                          />
                           fatima.ahmed@ku.ac.ae
                         </p>
                       </div>
@@ -1132,19 +1283,23 @@
                   <div
                     class="box"
                     data-bs-target="#alumniCarousel"
-                    data-bs-slide-to="0"></div>
+                    data-bs-slide-to="0"
+                  ></div>
                   <div
                     class="box"
                     data-bs-target="#alumniCarousel"
-                    data-bs-slide-to="1"></div>
+                    data-bs-slide-to="1"
+                  ></div>
                   <div
                     class="box active-box"
                     data-bs-target="#alumniCarousel"
-                    data-bs-slide-to="2"></div>
+                    data-bs-slide-to="2"
+                  ></div>
                   <img
                     src="assets/images/arrow-down.png"
                     id="alumniNext"
-                    alt="arrow" />
+                    alt="arrow"
+                  />
                 </div>
               </div>
             </div>
@@ -1159,14 +1314,16 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
                 KU Alumni
               </li>
               <li>
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
                 KU Simplicity CSM
               </li>
             </ul>
@@ -1178,35 +1335,40 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
                 Peer Mentoring Program
               </li>
               <li>
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
                 Career & Alumni Services
               </li>
               <li>
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
                 Peer Tutoring Program
               </li>
               <li>
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
                 Career Fair
               </li>
               <li>
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
                 KU Tawjeeh Program
               </li>
 
@@ -1214,14 +1376,16 @@
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
                 Majors Day
               </li>
               <li>
                 <img
                   src="assets/images/arrow-right.png"
                   alt="arrow"
-                  class="arrow" />
+                  class="arrow"
+                />
                 CTL – Student Development
               </li>
             </ul>
@@ -1231,7 +1395,7 @@
     </section>
 
     <!-- contact section  -->
-    <section class="contact-section">
+    <section id="contact" class="contact-section">
       <div class="container">
         <h2 class="section-title">Contact Us</h2>
         <form class="contact-form">
@@ -1252,7 +1416,8 @@
               <div class="angled-textarea">
                 <textarea
                   placeholder="Your Message"
-                  class="textarea"></textarea>
+                  class="textarea"
+                ></textarea>
               </div>
             </div>
           </div>
@@ -1290,14 +1455,10 @@
       </div>
     </footer>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/slider.js"></script>
   </body>
 </html>

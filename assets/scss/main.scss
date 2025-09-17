@@ -119,7 +119,10 @@ p {
   // }
 
   &__nav-strip {
-    position: relative;
+     position: relative;
+      top: 0;
+      width: 100%;
+      
     height: 112px;
     z-index: 5;
     padding: 1rem 0;
@@ -183,20 +186,122 @@ p {
     object-fit: contain;
   }
 
-  &__menu-toggle {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    background: none;
-    border: none;
-    cursor: pointer;
+  // &__menu-toggle {
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: 6px;
+  //   background: none;
+  //   border: none;
+  //   cursor: pointer;
 
-    span {
-      display: block;
-      width: 28px;
-      height: 3px;
-      background: var(--white-color);
-      transition: var(--transition-speed);
+  //   span {
+  //     display: block;
+  //     width: 28px;
+  //     height: 3px;
+  //     background: var(--white-color);
+  //     transition: var(--transition-speed);
+  //   }
+  // }
+
+  &__menu-toggle {
+    border: none;
+    background: transparent;
+
+    #checkbox2 {
+      display: none;
+    }
+
+    .toggle2 {
+      position: relative;
+      width: 50px;
+      height: 54px;
+      background: transparent;
+
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      transition-duration: 0.5s;
+    }
+
+    .bars {
+      width: 100%;
+      height: 4px;
+      background-color: var(--white-color);
+    }
+
+    #bar5 {
+      transition-duration: 0.8s;
+    }
+
+    #checkbox2:checked + .toggle2 .bars {
+      position: absolute;
+      transition-duration: 0.5s;
+    }
+
+    #checkbox2:checked + .toggle2 #bar5 {
+      transform: scaleX(0);
+      transition-duration: 0.5s;
+    }
+
+    #checkbox2:checked + .toggle2 #bar4 {
+      width: 100%;
+      transform: rotate(45deg);
+      transition-duration: 0.5s;
+    }
+
+    #checkbox2:checked + .toggle2 #bar6 {
+      width: 100%;
+      transform: rotate(-45deg);
+      transition-duration: 0.5s;
+    }
+
+    #checkbox2:checked + .toggle2 {
+      transition-duration: 0.5s;
+      transform: rotate(180deg);
+    }
+
+    /* Dropdown menu */
+    .dropdown {
+      position: absolute;
+      z-index: 999;
+      top: 70px;
+      right: 0;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      list-style: none;
+      float: right;
+      padding: 0;
+      margin: 0;
+      background-color: var(--dark-gray-color);
+      border-radius: 5px;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.4s ease;
+
+      li a {
+        display: block;
+        padding: 12px 20px;
+        color: var(--white-color);
+        text-decoration: none;
+        font-size: var(--font-sm);
+        transition: background 0.3s;
+        text-transform: capitalize;
+
+        &:hover {
+          background-color: var(--black-color);
+        }
+      }
+    }
+
+    #checkbox2:checked ~ .dropdown {
+      max-height: 500px;
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
@@ -340,10 +445,10 @@ p {
   }
 
   .event-cards {
-    // display: flex;
-    // grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin: 1rem 0;
-    // gap: 1rem;
+    gap: 1rem;
 
     .event-card {
       border-radius: 6px;
@@ -724,7 +829,6 @@ p {
   }
 
   .conference-card {
-
     .conference-img {
       width: 100%;
       height: 290px;
@@ -1133,7 +1237,6 @@ p {
   }
 
   .box {
-
     width: 24px;
     height: 24px;
     border: 1px solid var(--white-color);

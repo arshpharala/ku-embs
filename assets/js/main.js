@@ -5,6 +5,22 @@ $(document).ready(function () {
 	});
 });
 
+$(document).ready(function () {
+  // Close when a dropdown link is clicked
+  $(".dropdown a").on("click", function () {
+    $("#checkbox2").prop("checked", false);
+  });
+
+  // Close when clicking outside
+  $(document).on("click", function (e) {
+    // if the click target is NOT inside menu-toggle or dropdown
+    if (!$(e.target).closest(".hero__menu-toggle, .dropdown").length) {
+      $("#checkbox2").prop("checked", false);
+    }
+  });
+});
+
+
 // ================= Carousel Swipe Helper =================
 function enableSwipe(
 	carouselId,
@@ -73,8 +89,8 @@ function enableSwipe(
 }
 
 // ================= INIT CAROUSELS =================
-// enableSwipe("#eventsCarousel"); // Events
-// enableSwipe("#mediaCarousel", "mediaPrev", "mediaNext"); // Media
+enableSwipe("#eventsCarousel"); // Events
+enableSwipe("#mediaCarousel", "mediaPrev", "mediaNext"); // Media
 enableSwipe("#speakersCarousel", "speakersPrev", "speakersNext"); // Speakers
 enableSwipe("#alumniCarousel", null, 'alumniNext', true);
 

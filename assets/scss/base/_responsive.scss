@@ -668,6 +668,19 @@
 }
 
 /* ---------- For Small Phones (<= 576px) ---------- */
+@media (min-width: 576px) {
+  .hero {
+    &__menu-toggle {
+      position: relative;
+
+      .dropdown{
+      min-width: 30rem;
+
+      }
+    }
+  }
+}
+
 @media (max-width: 576px) {
   // hero section
   .hero {
@@ -697,9 +710,31 @@
       height: auto;
     }
 
-    &__ieee-logo,
-    &__menu-toggle {
+    &__ieee-logo {
       filter: brightness(0) saturate(100%);
+    }
+
+    &__menu-toggle {
+      .bars {
+        background-color: var(--black-color);
+      }
+      .toggle2 {
+        gap: 2px;
+        width: 30px;
+        height: 30px;
+      }
+      .dropdown {
+        top: 70px;
+          width: 100%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+
+          li a {
+        font-size: var(--font-xs);
+
+          }
+
+      }
     }
 
     &__title {
